@@ -291,6 +291,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     public void initializeStationNameMap() {
         stationIDs = new HashMap<String, String>();
         stationIDs.put("alewife", "place-alfcl");
+        stationIDs.put("oak grove", "place-ogmnl");
     }
 
     public JSONArray getJSONArray(String query) throws IOException {
