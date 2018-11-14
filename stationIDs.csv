@@ -1,0 +1,285 @@
+name,id
+ashland,Ashland
+auburndale,Auburndale
+ayer,Ayer
+belmont,Belmont
+boston landing,Boston Landing
+brandeis/roberts,Brandeis/ Roberts
+brandeis,Brandeis/ Roberts
+concord,Concord
+fairmount,Fairmount
+fitchburg,Fitchburg
+four corners/geneva,Four Corners / Geneva
+four corners,Four Corners / Geneva
+framingham,Framingham
+grafton,Grafton
+hastings,Hastings
+kendal green,Kendal Green
+lincoln,Lincoln
+littleton/rte 495,Littleton / Rte 495
+littleton,Littleton / Rte 495
+littleton rte 495,Littleton / Rte 495
+littleton 495,Littleton / Rte 495
+littleton route 495,Littleton / Rte 495
+littleton/route 495,Littleton / Rte 495
+morton street,Morton Street
+morton st,Morton Street
+natick center,Natick Center
+natick,Natick Center
+newmarket,Newmarket
+newtonville,Newtonville
+north leominster,North Leominster
+alewife,place-alfcl
+allston street,place-alsgr
+allston st,place-alsgr
+andrew,place-andrw
+andrew square,place-andrw
+andrew sq,place-andrw
+airport,place-aport
+aquarium,place-aqucl
+arlington,place-armnl
+arlington st,place-armnl
+ashmont,place-asmnl
+assembly,place-astao
+assembly square,place-astao
+assembly sq,place-astao
+babcock street,place-babck
+babcock st,place-babck
+back bay,place-bbsta
+back of the hill,place-bckhl
+beaconsfield,place-bcnfd
+washington square,place-bcnwa
+washington sq,place-bcnwa
+blandford street,place-bland
+blandford st,place-bland
+beachmont,place-bmmnl
+brandon hall,place-bndhl
+bowdoin,place-bomnl
+boylston,place-boyls
+boylston st,place-boyls
+broadway,place-brdwy
+packards corner,place-brico
+brookline hills,place-brkhl
+brigham circle,place-brmnl
+braintree,place-brntn
+boston university central,place-bucen
+bu central,place-bucen
+boston university east,place-buest
+bu east,place-buest
+butler,place-butlr
+boston university west,place-buwst
+bu west,place-buwst
+brookline village,place-bvmnl
+capen street,place-capst
+capen st,place-capst
+community college,place-ccmnl
+cedar grove,place-cedgr
+central avenue,place-cenav
+central ave,place-cenav
+central av,place-cenav
+chestnut hill,place-chhil
+chestnut hill avenue,place-chill
+chestnut hill ave,place-chill
+chestnut hill av,place-chill
+charles/mgh,place-chmnl
+charles,place-chmnl
+charles mgh,place-chmnl
+chinatown,place-chncl
+chiswick road,place-chswk
+chiswick rd,place-chswk
+cleveland circle,place-clmnl
+central,place-cntsq
+central square,place-cntsq
+central sq,place-cntsq
+copley,place-coecl
+copley square,place-coecl
+copley sq,place-coecl
+coolidge corner,place-cool
+davis,place-davis
+davis square,place-davis
+davis sq,place-davis
+dean road,place-denrd
+dean rd,place-denrd
+downtown crossing,place-dwnxg
+dtx,place-dwnxg
+eliot,place-eliot
+englewood avenue,place-engav
+englewood ave,place-engav
+englewood av,place-engav
+fairbanks street,place-fbkst
+fairbanks st,place-fbkst
+fenwood road,place-fenwd
+fenwood rd,place-fenwd
+fenway,place-fenwy
+fields corner,place-fldcr
+forest hills,place-forhl
+government center,place-gover
+griggs street,place-grigg
+griggs st,place-grigg
+green street,place-grnst
+green st,place-grnst
+haymarket,place-haecl
+harvard,place-harsq
+harvard square,place-harsq
+harvard sq,place-harsq
+harvard avenue,place-harvd
+harvard ave,place-harvd
+harvard av,place-harvd
+heath street,place-hsmnl
+heath st,place-hsmnl
+hawes street,place-hwsst
+hawes st,place-hwsst
+hynes convention center,place-hymnl
+hynes,place-hymnl
+jackson square,place-jaksn
+jackson sq,place-jaksn
+jfk/umass,place-jfk
+jfk,place-jfk
+jfk umass,place-jfk
+kenmore,place-kencl
+kenmore square,place-kencl
+kenmore sq,place-kencl
+kendall/mit,place-knncl
+kendall,place-knncl
+kendall mit,place-knncl
+kendall square,place-knncl
+kendall sq,place-knncl
+kent street,place-kntst
+kent st,place-kntst
+boston college,place-lake
+bc,place-lake
+lechmere,place-lech
+longwood medical area,place-lngmd
+longwood medical,place-lngmd
+longwood,place-longw
+massachusetts avenue,place-masta
+mass avenue,place-masta
+mass ave,place-masta
+mass av,place-masta
+massachusetts ave,place-masta
+massachusetts av,place-masta
+mattapan,place-matt
+museum of fine arts,place-mfa
+mfa,place-mfa
+milton,place-miltt
+mission park,place-mispk
+malden center,place-mlmnl
+malden,place-mlmnl
+maverick,place-mvbcl
+maverick square,place-mvbcl
+maverick sq,place-mvbcl
+newton highlands,place-newtn
+newton centre,place-newto
+newton,place-newto
+newton center,place-newto
+north station,place-north
+n station,place-north
+north quincy,place-nqncy
+n quincy,place-nqncy
+northeastern university,place-nuniv
+northeastern,place-nuniv
+oak grove,place-ogmnl
+orient heights,place-orhte
+park street,place-pktrm
+park st,place-pktrm
+pleasant street,place-plsgr
+pleasant st,place-plsgr
+porter,place-portr
+porter square,place-portr
+porter sq,place-portr
+prudential,place-prmnl
+prudential center,place-prmnl
+quincy adams,place-qamnl
+quincy center,place-qnctr
+quincy,place-qnctr
+revere beach,place-rbmnl
+roxbury crossing,place-rcmnl
+riverside,place-river
+reservoir,place-rsmnl
+ruggles,place-rugg
+ruggles street,place-rugg
+ruggles st,place-rugg
+riverway,place-rvrwy
+stony brook,place-sbmnl
+suffolk downs,place-sdmnl
+savin hill,place-shmnl
+saint marys street,place-smary
+saint marys st,place-smary
+saint mary's street,place-smary
+saint mary's st,place-smary
+st marys street,place-smary
+st marys st,place-smary
+st mary's street,place-smary
+st mary's st,place-smary
+st. marys street,place-smary
+st. marys st,place-smary
+st. mary's street,place-smary
+st. mary's st,place-smary
+shawmut,place-smmnl
+south street,place-sougr
+south st,place-sougr
+science park,place-spmnl
+south station,place-sstat
+s station,place-sstat
+state street,place-state
+state st,place-state
+state,place-state
+sutherland road,place-sthld
+sutherland rd,place-sthld
+saint paul street,place-stplb
+saint paul st,place-stplb
+st paul street,place-stplb
+st paul st,place-stplb
+saint paul street,place-stpul
+saint paul st,place-stpul
+st paul street,place-stpul
+st paul st,place-stpul
+sullivan square,place-sull
+sullivan sq,place-sull
+sullivan,place-sull
+summit avenue,place-sumav
+summit ave,place-sumav
+summit av,place-sumav
+symphony,place-symcl
+symphony hall,place-symcl
+tappan street,place-tapst
+tappan st,place-tapst
+tufts medical center,place-tumnl
+tufts,place-tumnl
+valley road,place-valrd
+valley rd,place-valrd
+waban,place-waban
+washington street,place-wascm
+washington st,place-wascm
+wellington,place-welln
+wood island,place-wimnl
+wonderland,place-wondl
+woodland,place-woodl
+warren street,place-wrnst
+warren st,place-wrnst
+readville,Readville
+shirley,Shirley
+silver hill,Silver Hill
+south acton,South Acton
+s acton,South Acton
+southborough,Southborough
+talbot avenue,Talbot Avenue
+talbot ave,Talbot Avenue
+talbot av,Talbot Avenue
+uphams corner,Uphams Corner
+wachusett,Wachusett
+waltham,Waltham
+waverley,Waverley
+wellesley farms,Wellesley Farms
+wellesley hills,Wellesley Hills
+wellesley square,Wellesley Square
+wellesley sq,Wellesley Square
+west concord,West Concord
+w concord,West Concord
+west natick,West Natick
+w natick,West Natick
+west newton,West Newton
+w newton,West Newton
+westborough,Westborough
+worcester,Worcester
+yawkey,Yawkey
