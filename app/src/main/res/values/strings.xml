@@ -1,8 +1,293 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">HW3</string>
+    <string name="app_name">MBTA Tracker</string>
     <string name="action_settings">Settings</string>
     <string name="button_text">OK</string>
-
+    <string-array name="stationIDs">
+        <item>ashland,Ashland</item>
+        <item>auburndale,Auburndale</item>
+        <item>ayer,Ayer</item>
+        <item>belmont,Belmont</item>
+        <item>boston landing,Boston Landing</item>
+        <item>brandeis/roberts,Brandeis/ Roberts</item>
+        <item>brandeis,Brandeis/ Roberts</item>
+        <item>concord,Concord</item>
+        <item>fairmount,Fairmount</item>
+        <item>fitchburg,Fitchburg</item>
+        <item>four corners/geneva,Four Corners / Geneva</item>
+        <item>four corners,Four Corners / Geneva</item>
+        <item>framingham,Framingham</item>
+        <item>grafton,Grafton</item>
+        <item>hastings,Hastings</item>
+        <item>kendal green,Kendal Green</item>
+        <item>lincoln,Lincoln</item>
+        <item>littleton/rte 495,Littleton / Rte 495</item>
+        <item>littleton,Littleton / Rte 495</item>
+        <item>littleton rte 495,Littleton / Rte 495</item>
+        <item>littleton 495,Littleton / Rte 495</item>
+        <item>littleton route 495,Littleton / Rte 495</item>
+        <item>littleton/route 495,Littleton / Rte 495</item>
+        <item>morton street,Morton Street</item>
+        <item>morton st,Morton Street</item>
+        <item>natick center,Natick Center</item>
+        <item>natick,Natick Center</item>
+        <item>newmarket,Newmarket</item>
+        <item>newtonville,Newtonville</item>
+        <item>north leominster,North Leominster</item>
+        <item>alewife,place-alfcl</item>
+        <item>allston street,place-alsgr</item>
+        <item>allston st,place-alsgr</item>
+        <item>andrew,place-andrw</item>
+        <item>andrew square,place-andrw</item>
+        <item>andrew sq,place-andrw</item>
+        <item>airport,place-aport</item>
+        <item>aquarium,place-aqucl</item>
+        <item>arlington,place-armnl</item>
+        <item>arlington st,place-armnl</item>
+        <item>ashmont,place-asmnl</item>
+        <item>assembly,place-astao</item>
+        <item>assembly square,place-astao</item>
+        <item>assembly sq,place-astao</item>
+        <item>babcock street,place-babck</item>
+        <item>babcock st,place-babck</item>
+        <item>back bay,place-bbsta</item>
+        <item>back of the hill,place-bckhl</item>
+        <item>beaconsfield,place-bcnfd</item>
+        <item>washington square,place-bcnwa</item>
+        <item>washington sq,place-bcnwa</item>
+        <item>blandford street,place-bland</item>
+        <item>blandford st,place-bland</item>
+        <item>beachmont,place-bmmnl</item>
+        <item>brandon hall,place-bndhl</item>
+        <item>bowdoin,place-bomnl</item>
+        <item>boylston,place-boyls</item>
+        <item>boylston st,place-boyls</item>
+        <item>broadway,place-brdwy</item>
+        <item>packards corner,place-brico</item>
+        <item>brookline hills,place-brkhl</item>
+        <item>brigham circle,place-brmnl</item>
+        <item>braintree,place-brntn</item>
+        <item>boston university central,place-bucen</item>
+        <item>bu central,place-bucen</item>
+        <item>boston university east,place-buest</item>
+        <item>bu east,place-buest</item>
+        <item>butler,place-butlr</item>
+        <item>boston university west,place-buwst</item>
+        <item>bu west,place-buwst</item>
+        <item>brookline village,place-bvmnl</item>
+        <item>capen street,place-capst</item>
+        <item>capen st,place-capst</item>
+        <item>community college,place-ccmnl</item>
+        <item>cedar grove,place-cedgr</item>
+        <item>central avenue,place-cenav</item>
+        <item>central ave,place-cenav</item>
+        <item>central av,place-cenav</item>
+        <item>chestnut hill,place-chhil</item>
+        <item>chestnut hill avenue,place-chill</item>
+        <item>chestnut hill ave,place-chill</item>
+        <item>chestnut hill av,place-chill</item>
+        <item>charles/mgh,place-chmnl</item>
+        <item>charles,place-chmnl</item>
+        <item>charles mgh,place-chmnl</item>
+        <item>chinatown,place-chncl</item>
+        <item>chiswick road,place-chswk</item>
+        <item>chiswick rd,place-chswk</item>
+        <item>cleveland circle,place-clmnl</item>
+        <item>central,place-cntsq</item>
+        <item>central square,place-cntsq</item>
+        <item>central sq,place-cntsq</item>
+        <item>copley,place-coecl</item>
+        <item>copley square,place-coecl</item>
+        <item>copley sq,place-coecl</item>
+        <item>coolidge corner,place-cool</item>
+        <item>davis,place-davis</item>
+        <item>davis square,place-davis</item>
+        <item>davis sq,place-davis</item>
+        <item>dean road,place-denrd</item>
+        <item>dean rd,place-denrd</item>
+        <item>downtown crossing,place-dwnxg</item>
+        <item>dtx,place-dwnxg</item>
+        <item>eliot,place-eliot</item>
+        <item>englewood avenue,place-engav</item>
+        <item>englewood ave,place-engav</item>
+        <item>englewood av,place-engav</item>
+        <item>fairbanks street,place-fbkst</item>
+        <item>fairbanks st,place-fbkst</item>
+        <item>fenwood road,place-fenwd</item>
+        <item>fenwood rd,place-fenwd</item>
+        <item>fenway,place-fenwy</item>
+        <item>fields corner,place-fldcr</item>
+        <item>forest hills,place-forhl</item>
+        <item>government center,place-gover</item>
+        <item>griggs street,place-grigg</item>
+        <item>griggs st,place-grigg</item>
+        <item>green street,place-grnst</item>
+        <item>green st,place-grnst</item>
+        <item>haymarket,place-haecl</item>
+        <item>harvard,place-harsq</item>
+        <item>harvard square,place-harsq</item>
+        <item>harvard sq,place-harsq</item>
+        <item>harvard avenue,place-harvd</item>
+        <item>harvard ave,place-harvd</item>
+        <item>harvard av,place-harvd</item>
+        <item>heath street,place-hsmnl</item>
+        <item>heath st,place-hsmnl</item>
+        <item>hawes street,place-hwsst</item>
+        <item>hawes st,place-hwsst</item>
+        <item>hynes convention center,place-hymnl</item>
+        <item>hynes,place-hymnl</item>
+        <item>jackson square,place-jaksn</item>
+        <item>jackson sq,place-jaksn</item>
+        <item>jfk/umass,place-jfk</item>
+        <item>jfk,place-jfk</item>
+        <item>jfk umass,place-jfk</item>
+        <item>kenmore,place-kencl</item>
+        <item>kenmore square,place-kencl</item>
+        <item>kenmore sq,place-kencl</item>
+        <item>kendall/mit,place-knncl</item>
+        <item>kendall,place-knncl</item>
+        <item>kendall mit,place-knncl</item>
+        <item>kendall square,place-knncl</item>
+        <item>kendall sq,place-knncl</item>
+        <item>kent street,place-kntst</item>
+        <item>kent st,place-kntst</item>
+        <item>boston college,place-lake</item>
+        <item>bc,place-lake</item>
+        <item>lechmere,place-lech</item>
+        <item>longwood medical area,place-lngmd</item>
+        <item>longwood medical,place-lngmd</item>
+        <item>longwood,place-longw</item>
+        <item>massachusetts avenue,place-masta</item>
+        <item>mass avenue,place-masta</item>
+        <item>mass ave,place-masta</item>
+        <item>mass av,place-masta</item>
+        <item>massachusetts ave,place-masta</item>
+        <item>massachusetts av,place-masta</item>
+        <item>mattapan,place-matt</item>
+        <item>museum of fine arts,place-mfa</item>
+        <item>mfa,place-mfa</item>
+        <item>milton,place-miltt</item>
+        <item>mission park,place-mispk</item>
+        <item>malden center,place-mlmnl</item>
+        <item>malden,place-mlmnl</item>
+        <item>maverick,place-mvbcl</item>
+        <item>maverick square,place-mvbcl</item>
+        <item>maverick sq,place-mvbcl</item>
+        <item>newton highlands,place-newtn</item>
+        <item>newton centre,place-newto</item>
+        <item>newton,place-newto</item>
+        <item>newton center,place-newto</item>
+        <item>north station,place-north</item>
+        <item>n station,place-north</item>
+        <item>north quincy,place-nqncy</item>
+        <item>n quincy,place-nqncy</item>
+        <item>northeastern university,place-nuniv</item>
+        <item>northeastern,place-nuniv</item>
+        <item>oak grove,place-ogmnl</item>
+        <item>orient heights,place-orhte</item>
+        <item>park street,place-pktrm</item>
+        <item>park st,place-pktrm</item>
+        <item>pleasant street,place-plsgr</item>
+        <item>pleasant st,place-plsgr</item>
+        <item>porter,place-portr</item>
+        <item>porter square,place-portr</item>
+        <item>porter sq,place-portr</item>
+        <item>prudential,place-prmnl</item>
+        <item>prudential center,place-prmnl</item>
+        <item>quincy adams,place-qamnl</item>
+        <item>quincy center,place-qnctr</item>
+        <item>quincy,place-qnctr</item>
+        <item>revere beach,place-rbmnl</item>
+        <item>roxbury crossing,place-rcmnl</item>
+        <item>riverside,place-river</item>
+        <item>reservoir,place-rsmnl</item>
+        <item>ruggles,place-rugg</item>
+        <item>ruggles street,place-rugg</item>
+        <item>ruggles st,place-rugg</item>
+        <item>riverway,place-rvrwy</item>
+        <item>stony brook,place-sbmnl</item>
+        <item>suffolk downs,place-sdmnl</item>
+        <item>savin hill,place-shmnl</item>
+        <item>saint marys street,place-smary</item>
+        <item>saint marys st,place-smary</item>
+        <item>saint mary\'s street,place-smary</item>
+        <item>saint mary\'s st,place-smary</item>
+        <item>st marys street,place-smary</item>
+        <item>st marys st,place-smary</item>
+        <item>st mary\'s street,place-smary</item>
+        <item>st mary\'s st,place-smary</item>
+        <item>st. marys street,place-smary</item>
+        <item>st. marys st,place-smary</item>
+        <item>st. mary\'s street,place-smary</item>
+        <item>st. mary\'s st,place-smary</item>
+        <item>shawmut,place-smmnl</item>
+        <item>south street,place-sougr</item>
+        <item>south st,place-sougr</item>
+        <item>science park,place-spmnl</item>
+        <item>south station,place-sstat</item>
+        <item>s station,place-sstat</item>
+        <item>state street,place-state</item>
+        <item>state st,place-state</item>
+        <item>state,place-state</item>
+        <item>sutherland road,place-sthld</item>
+        <item>sutherland rd,place-sthld</item>
+        <item>saint paul street,place-stplb</item>
+        <item>saint paul st,place-stplb</item>
+        <item>st paul street,place-stplb</item>
+        <item>st paul st,place-stplb</item>
+        <item>saint paul street,place-stpul</item>
+        <item>saint paul st,place-stpul</item>
+        <item>st paul street,place-stpul</item>
+        <item>st paul st,place-stpul</item>
+        <item>sullivan square,place-sull</item>
+        <item>sullivan sq,place-sull</item>
+        <item>sullivan,place-sull</item>
+        <item>summit avenue,place-sumav</item>
+        <item>summit ave,place-sumav</item>
+        <item>summit av,place-sumav</item>
+        <item>symphony,place-symcl</item>
+        <item>symphony hall,place-symcl</item>
+        <item>tappan street,place-tapst</item>
+        <item>tappan st,place-tapst</item>
+        <item>tufts medical center,place-tumnl</item>
+        <item>tufts,place-tumnl</item>
+        <item>valley road,place-valrd</item>
+        <item>valley rd,place-valrd</item>
+        <item>waban,place-waban</item>
+        <item>washington street,place-wascm</item>
+        <item>washington st,place-wascm</item>
+        <item>wellington,place-welln</item>
+        <item>wood island,place-wimnl</item>
+        <item>wonderland,place-wondl</item>
+        <item>woodland,place-woodl</item>
+        <item>warren street,place-wrnst</item>
+        <item>warren st,place-wrnst</item>
+        <item>readville,Readville</item>
+        <item>shirley,Shirley</item>
+        <item>silver hill,Silver Hill</item>
+        <item>south acton,South Acton</item>
+        <item>s acton,South Acton</item>
+        <item>southborough,Southborough</item>
+        <item>talbot avenue,Talbot Avenue</item>
+        <item>talbot ave,Talbot Avenue</item>
+        <item>talbot av,Talbot Avenue</item>
+        <item>uphams corner,Uphams Corner</item>
+        <item>wachusett,Wachusett</item>
+        <item>waltham,Waltham</item>
+        <item>waverley,Waverley</item>
+        <item>wellesley farms,Wellesley Farms</item>
+        <item>wellesley hills,Wellesley Hills</item>
+        <item>wellesley square,Wellesley Square</item>
+        <item>wellesley sq,Wellesley Square</item>
+        <item>west concord,West Concord</item>
+        <item>w concord,West Concord</item>
+        <item>west natick,West Natick</item>
+        <item>w natick,West Natick</item>
+        <item>west newton,West Newton</item>
+        <item>w newton,West Newton</item>
+        <item>westborough,Westborough</item>
+        <item>worcester,Worcester</item>
+        <item>yawkey,Yawkey</item>
+    </string-array>
 </resources>

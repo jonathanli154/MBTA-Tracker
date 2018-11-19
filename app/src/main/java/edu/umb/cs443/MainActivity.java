@@ -2,6 +2,7 @@ package edu.umb.cs443;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.ConnectivityManager;
@@ -10,6 +11,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -89,6 +91,20 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
 
         MapFragment mFragment=((MapFragment) getFragmentManager().findFragmentById(R.id.map));
         mFragment.getMapAsync(this);
+
+        EditText edittext=(EditText)findViewById(R.id.editText);
+        edittext.setOnKeyListener(new View.OnKeyListener() {
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                // If the event is a key-down event on the "enter" button
+                if ((event.getAction() == KeyEvent.ACTION_DOWN) &&
+                        (keyCode == KeyEvent.KEYCODE_ENTER)) {
+                    // Perform action on key press
+                    ok();
+                    return true;
+                }
+                return false;
+            }
+        });
 
         routes = new ArrayList<JSONArray>();
         stations = new HashMap<String, JSONObject>();
@@ -251,6 +267,10 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     public void ok(View v) {
+        ok();
+    }
+
+    public void ok() {
         EditText msgTextField = (EditText) findViewById(R.id.editText);
         String search = msgTextField.getText().toString().toLowerCase();
         String id = stationIDs.get(search);
@@ -290,8 +310,13 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
 
     public void initializeStationNameMap() {
         stationIDs = new HashMap<String, String>();
-        stationIDs.put("alewife", "place-alfcl");
-        stationIDs.put("oak grove", "place-ogmnl");
+        stationIDs.put("test", "place-alfcl");
+        Resources res = getResources();
+        String[] arr = res.getStringArray(R.array.stationIDs);
+        for (String s: arr) {
+            String[] split = s.split(",", 2);
+            stationIDs.put(split[0], split[1]);
+        }
     }
 
     public JSONArray getJSONArray(String query) throws IOException {
