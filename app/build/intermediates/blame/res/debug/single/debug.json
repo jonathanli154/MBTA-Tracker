@@ -1,9 +1,5 @@
 [
     {
-        "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\layout_place_autocomplete_fragment.xml.flat",
-        "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-places-12.0.1.aar\\5bc0116554378d06eb56a89b049a52ff\\res\\layout\\place_autocomplete_fragment.xml"
-    },
-    {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_textfield_search_activated_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\723a7dfbe1e4aed5d9348978f12f3308\\res\\drawable-mdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png"
     },
@@ -25,7 +21,7 @@
     },
     {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_notification_bg_low_normal.9.png.flat",
-        "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\99c4d8b2b3a6ca2cc19d1104649f56fb\\res\\drawable-xhdpi-v4\\notification_bg_low_normal.9.png"
+        "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\cf30aa4fb57664fde0ddc29c52dc3d87\\res\\drawable-xhdpi-v4\\notification_bg_low_normal.9.png"
     },
     {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_ic_mr_button_connecting_13_dark.png.flat",
@@ -61,7 +57,7 @@
     },
     {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_part_chronometer.xml.flat",
-        "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\99c4d8b2b3a6ca2cc19d1104649f56fb\\res\\layout\\notification_template_part_chronometer.xml"
+        "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\cf30aa4fb57664fde0ddc29c52dc3d87\\res\\layout\\notification_template_part_chronometer.xml"
     },
     {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_scrubber_primary_mtrl_alpha.9.png.flat",
@@ -517,7 +513,7 @@
     },
     {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_notification_bg_normal_pressed.9.png.flat",
-        "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\99c4d8b2b3a6ca2cc19d1104649f56fb\\res\\drawable-mdpi-v4\\notification_bg_normal_pressed.9.png"
+        "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\cf30aa4fb57664fde0ddc29c52dc3d87\\res\\drawable-mdpi-v4\\notification_bg_normal_pressed.9.png"
     },
     {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_quantum_ic_bigtop_updates_white_24.png.flat",
@@ -613,7 +609,7 @@
     },
     {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable_notification_bg.xml.flat",
-        "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\99c4d8b2b3a6ca2cc19d1104649f56fb\\res\\drawable\\notification_bg.xml"
+        "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\cf30aa4fb57664fde0ddc29c52dc3d87\\res\\drawable\\notification_bg.xml"
     },
     {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_ic_arrow_drop_right_black_24dp.xml.flat",
@@ -837,7 +833,7 @@
     },
     {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_notification_bg_normal.9.png.flat",
-        "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\99c4d8b2b3a6ca2cc19d1104649f56fb\\res\\drawable-xhdpi-v4\\notification_bg_normal.9.png"
+        "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\cf30aa4fb57664fde0ddc29c52dc3d87\\res\\drawable-xhdpi-v4\\notification_bg_normal.9.png"
     },
     {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-xxhdpi-v17_abc_spinner_mtrl_am_alpha.9.png.flat",
@@ -933,7 +929,7 @@
     },
     {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_notification_bg_normal_pressed.9.png.flat",
-        "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\99c4d8b2b3a6ca2cc19d1104649f56fb\\res\\drawable-xhdpi-v4\\notification_bg_normal_pressed.9.png"
+        "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\cf30aa4fb57664fde0ddc29c52dc3d87\\res\\drawable-xhdpi-v4\\notification_bg_normal_pressed.9.png"
     },
     {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\color_wallet_secondary_text_holo_dark.xml.flat",
@@ -1048,10 +1044,6 @@
         "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\723a7dfbe1e4aed5d9348978f12f3308\\res\\drawable-xxxhdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
     },
     {
-        "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_tint_switch_track.xml.flat",
-        "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\723a7dfbe1e4aed5d9348978f12f3308\\res\\color\\abc_tint_switch_track.xml"
-    },
-    {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_scrubber_control_off_mtrl_alpha.png.flat",
         "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\723a7dfbe1e4aed5d9348978f12f3308\\res\\drawable-hdpi-v4\\abc_scrubber_control_off_mtrl_alpha.png"
     },
@@ -1073,7 +1065,7 @@
     },
     {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_notification_bg_normal_pressed.9.png.flat",
-        "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\99c4d8b2b3a6ca2cc19d1104649f56fb\\res\\drawable-hdpi-v4\\notification_bg_normal_pressed.9.png"
+        "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\cf30aa4fb57664fde0ddc29c52dc3d87\\res\\drawable-hdpi-v4\\notification_bg_normal_pressed.9.png"
     },
     {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_ic_mr_button_connected_08_dark.png.flat",
@@ -1300,10 +1292,6 @@
         "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\723a7dfbe1e4aed5d9348978f12f3308\\res\\anim\\abc_slide_out_bottom.xml"
     },
     {
-        "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_tint_seek_thumb.xml.flat",
-        "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\723a7dfbe1e4aed5d9348978f12f3308\\res\\color\\abc_tint_seek_thumb.xml"
-    },
-    {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ic_star_black_16dp.png.flat",
         "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\723a7dfbe1e4aed5d9348978f12f3308\\res\\drawable-xhdpi-v4\\abc_ic_star_black_16dp.png"
     },
@@ -1369,7 +1357,7 @@
     },
     {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable_notification_icon_background.xml.flat",
-        "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\99c4d8b2b3a6ca2cc19d1104649f56fb\\res\\drawable\\notification_icon_background.xml"
+        "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\cf30aa4fb57664fde0ddc29c52dc3d87\\res\\drawable\\notification_icon_background.xml"
     },
     {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_ic_mr_button_connected_10_light.png.flat",
@@ -1464,10 +1452,6 @@
         "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-cast-framework-12.0.1.aar\\d64b8bf6957fd00f23fc6a301c7689ba\\res\\layout\\cast_tracks_chooser_dialog_layout.xml"
     },
     {
-        "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_edit_text_material.xml.flat",
-        "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\723a7dfbe1e4aed5d9348978f12f3308\\res\\drawable\\abc_edit_text_material.xml"
-    },
-    {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_ic_search_api_material.xml.flat",
         "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\723a7dfbe1e4aed5d9348978f12f3308\\res\\drawable\\abc_ic_search_api_material.xml"
     },
@@ -1541,7 +1525,7 @@
     },
     {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_notification_bg_normal.9.png.flat",
-        "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\99c4d8b2b3a6ca2cc19d1104649f56fb\\res\\drawable-hdpi-v4\\notification_bg_normal.9.png"
+        "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\cf30aa4fb57664fde0ddc29c52dc3d87\\res\\drawable-hdpi-v4\\notification_bg_normal.9.png"
     },
     {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_ic_mr_button_connected_16_dark.png.flat",
@@ -1588,12 +1572,8 @@
         "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-12.0.1.aar\\671496e7448399fd5c1e86840096e571\\res\\drawable-hdpi-v4\\common_full_open_on_phone.png"
     },
     {
-        "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_btn_colored_borderless_text_material.xml.flat",
-        "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\723a7dfbe1e4aed5d9348978f12f3308\\res\\color\\abc_btn_colored_borderless_text_material.xml"
-    },
-    {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_notification_bg_low_pressed.9.png.flat",
-        "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\99c4d8b2b3a6ca2cc19d1104649f56fb\\res\\drawable-hdpi-v4\\notification_bg_low_pressed.9.png"
+        "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\cf30aa4fb57664fde0ddc29c52dc3d87\\res\\drawable-hdpi-v4\\notification_bg_low_pressed.9.png"
     },
     {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_powered_by_google_light.png.flat",
@@ -1613,7 +1593,7 @@
     },
     {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21_notification_template_icon_group.xml.flat",
-        "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\99c4d8b2b3a6ca2cc19d1104649f56fb\\res\\layout-v21\\notification_template_icon_group.xml"
+        "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\cf30aa4fb57664fde0ddc29c52dc3d87\\res\\layout-v21\\notification_template_icon_group.xml"
     },
     {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_ic_mr_button_connecting_13_light.png.flat",
@@ -1637,7 +1617,7 @@
     },
     {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_notification_bg_low_pressed.9.png.flat",
-        "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\99c4d8b2b3a6ca2cc19d1104649f56fb\\res\\drawable-mdpi-v4\\notification_bg_low_pressed.9.png"
+        "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\cf30aa4fb57664fde0ddc29c52dc3d87\\res\\drawable-mdpi-v4\\notification_bg_low_pressed.9.png"
     },
     {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_ic_star_half_black_16dp.png.flat",
@@ -1849,7 +1829,7 @@
     },
     {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21_notification_action_background.xml.flat",
-        "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\99c4d8b2b3a6ca2cc19d1104649f56fb\\res\\drawable-v21\\notification_action_background.xml"
+        "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\cf30aa4fb57664fde0ddc29c52dc3d87\\res\\drawable-v21\\notification_action_background.xml"
     },
     {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_ic_dialog_close_light.png.flat",
@@ -1937,7 +1917,7 @@
     },
     {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21_notification_template_custom_big.xml.flat",
-        "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\99c4d8b2b3a6ca2cc19d1104649f56fb\\res\\layout-v21\\notification_template_custom_big.xml"
+        "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\cf30aa4fb57664fde0ddc29c52dc3d87\\res\\layout-v21\\notification_template_custom_big.xml"
     },
     {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-tvdpi-v4_ic_plusone_small_off_client.png.flat",
@@ -2049,7 +2029,7 @@
     },
     {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_notification_bg_low_normal.9.png.flat",
-        "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\99c4d8b2b3a6ca2cc19d1104649f56fb\\res\\drawable-mdpi-v4\\notification_bg_low_normal.9.png"
+        "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\cf30aa4fb57664fde0ddc29c52dc3d87\\res\\drawable-mdpi-v4\\notification_bg_low_normal.9.png"
     },
     {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_cast_ic_stop_circle_filled_white.png.flat",
@@ -2205,7 +2185,7 @@
     },
     {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_notification_bg_low_pressed.9.png.flat",
-        "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\99c4d8b2b3a6ca2cc19d1104649f56fb\\res\\drawable-xhdpi-v4\\notification_bg_low_pressed.9.png"
+        "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\cf30aa4fb57664fde0ddc29c52dc3d87\\res\\drawable-xhdpi-v4\\notification_bg_low_pressed.9.png"
     },
     {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_scrubber_control_off_mtrl_alpha.png.flat",
@@ -2281,7 +2261,7 @@
     },
     {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable_notification_tile_bg.xml.flat",
-        "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\99c4d8b2b3a6ca2cc19d1104649f56fb\\res\\drawable\\notification_tile_bg.xml"
+        "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\cf30aa4fb57664fde0ddc29c52dc3d87\\res\\drawable\\notification_tile_bg.xml"
     },
     {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_quantum_ic_skip_previous_white_24.png.flat",
@@ -2346,10 +2326,6 @@
     {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_quantum_ic_skip_next_grey600_36.png.flat",
         "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-cast-framework-12.0.1.aar\\d64b8bf6957fd00f23fc6a301c7689ba\\res\\drawable-xhdpi-v4\\quantum_ic_skip_next_grey600_36.png"
-    },
-    {
-        "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\layout-v16_notification_template_custom_big.xml.flat",
-        "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\99c4d8b2b3a6ca2cc19d1104649f56fb\\res\\layout-v16\\notification_template_custom_big.xml"
     },
     {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_ic_mr_button_connected_15_light.png.flat",
@@ -2452,10 +2428,6 @@
         "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\723a7dfbe1e4aed5d9348978f12f3308\\res\\drawable-hdpi-v4\\abc_ic_star_half_black_16dp.png"
     },
     {
-        "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_icon_group.xml.flat",
-        "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\99c4d8b2b3a6ca2cc19d1104649f56fb\\res\\layout\\notification_template_icon_group.xml"
-    },
-    {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_quantum_ic_play_circle_filled_grey600_36.png.flat",
         "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-cast-framework-12.0.1.aar\\d64b8bf6957fd00f23fc6a301c7689ba\\res\\drawable-xhdpi-v4\\quantum_ic_play_circle_filled_grey600_36.png"
     },
@@ -2526,10 +2498,6 @@
     {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_text_dark.xml.flat",
         "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-12.0.1.aar\\671496e7448399fd5c1e86840096e571\\res\\drawable\\common_google_signin_btn_text_dark.xml"
-    },
-    {
-        "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_tint_spinner.xml.flat",
-        "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\723a7dfbe1e4aed5d9348978f12f3308\\res\\color\\abc_tint_spinner.xml"
     },
     {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_alert_dialog_title_material.xml.flat",
@@ -2941,7 +2909,7 @@
     },
     {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_notification_bg_normal.9.png.flat",
-        "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\99c4d8b2b3a6ca2cc19d1104649f56fb\\res\\drawable-mdpi-v4\\notification_bg_normal.9.png"
+        "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\cf30aa4fb57664fde0ddc29c52dc3d87\\res\\drawable-mdpi-v4\\notification_bg_normal.9.png"
     },
     {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_quantum_ic_skip_next_grey600_36.png.flat",
@@ -3113,7 +3081,7 @@
     },
     {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_notify_panel_notification_icon_bg.png.flat",
-        "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\99c4d8b2b3a6ca2cc19d1104649f56fb\\res\\drawable-mdpi-v4\\notify_panel_notification_icon_bg.png"
+        "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\cf30aa4fb57664fde0ddc29c52dc3d87\\res\\drawable-mdpi-v4\\notify_panel_notification_icon_bg.png"
     },
     {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_hint_foreground_material_light.xml.flat",
@@ -3201,7 +3169,7 @@
     },
     {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21_notification_action_tombstone.xml.flat",
-        "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\99c4d8b2b3a6ca2cc19d1104649f56fb\\res\\layout-v21\\notification_action_tombstone.xml"
+        "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\cf30aa4fb57664fde0ddc29c52dc3d87\\res\\layout-v21\\notification_action_tombstone.xml"
     },
     {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\color-v23_abc_tint_seek_thumb.xml.flat",
@@ -3256,20 +3224,12 @@
         "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\mediarouter-v7-26.1.0.aar\\c4b912098f6391f76e5a48fe3c5aef4a\\res\\drawable-xhdpi-v4\\ic_mr_button_connecting_23_dark.png"
     },
     {
-        "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_action_tombstone.xml.flat",
-        "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\99c4d8b2b3a6ca2cc19d1104649f56fb\\res\\layout\\notification_action_tombstone.xml"
-    },
-    {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable_cast_ic_mini_controller_forward30.xml.flat",
         "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-cast-framework-12.0.1.aar\\d64b8bf6957fd00f23fc6a301c7689ba\\res\\drawable\\cast_ic_mini_controller_forward30.xml"
     },
     {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_places_ic_clear.png.flat",
         "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-places-12.0.1.aar\\5bc0116554378d06eb56a89b049a52ff\\res\\drawable-xhdpi-v4\\places_ic_clear.png"
-    },
-    {
-        "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_btn_colored_text_material.xml.flat",
-        "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\723a7dfbe1e4aed5d9348978f12f3308\\res\\color\\abc_btn_colored_text_material.xml"
     },
     {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_popup_menu_header_item_layout.xml.flat",
@@ -3916,8 +3876,12 @@
         "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\723a7dfbe1e4aed5d9348978f12f3308\\res\\drawable-xxhdpi-v4\\abc_ic_star_black_36dp.png"
     },
     {
+        "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\layout_recyclerview_item.xml.flat",
+        "source": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\src\\main\\res\\layout\\recyclerview_item.xml"
+    },
+    {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_notify_panel_notification_icon_bg.png.flat",
-        "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\99c4d8b2b3a6ca2cc19d1104649f56fb\\res\\drawable-xhdpi-v4\\notify_panel_notification_icon_bg.png"
+        "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\cf30aa4fb57664fde0ddc29c52dc3d87\\res\\drawable-xhdpi-v4\\notify_panel_notification_icon_bg.png"
     },
     {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_ic_mr_button_connected_16_dark.png.flat",
@@ -3973,7 +3937,7 @@
     },
     {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_notify_panel_notification_icon_bg.png.flat",
-        "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\99c4d8b2b3a6ca2cc19d1104649f56fb\\res\\drawable-hdpi-v4\\notify_panel_notification_icon_bg.png"
+        "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\cf30aa4fb57664fde0ddc29c52dc3d87\\res\\drawable-hdpi-v4\\notify_panel_notification_icon_bg.png"
     },
     {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
@@ -4021,7 +3985,7 @@
     },
     {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable_notification_bg_low.xml.flat",
-        "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\99c4d8b2b3a6ca2cc19d1104649f56fb\\res\\drawable\\notification_bg_low.xml"
+        "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\cf30aa4fb57664fde0ddc29c52dc3d87\\res\\drawable\\notification_bg_low.xml"
     },
     {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_quantum_ic_cast_white_36.png.flat",
@@ -4088,10 +4052,6 @@
         "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\723a7dfbe1e4aed5d9348978f12f3308\\res\\drawable-xxhdpi-v4\\abc_list_selector_disabled_holo_light.9.png"
     },
     {
-        "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_tint_edittext.xml.flat",
-        "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\723a7dfbe1e4aed5d9348978f12f3308\\res\\color\\abc_tint_edittext.xml"
-    },
-    {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_ic_mr_button_connecting_06_light.png.flat",
         "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\mediarouter-v7-26.1.0.aar\\c4b912098f6391f76e5a48fe3c5aef4a\\res\\drawable-xhdpi-v4\\ic_mr_button_connecting_06_light.png"
     },
@@ -4130,10 +4090,6 @@
     {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_ic_mr_button_connected_12_dark.png.flat",
         "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\mediarouter-v7-26.1.0.aar\\c4b912098f6391f76e5a48fe3c5aef4a\\res\\drawable-xhdpi-v4\\ic_mr_button_connected_12_dark.png"
-    },
-    {
-        "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_screen_toolbar.xml.flat",
-        "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\723a7dfbe1e4aed5d9348978f12f3308\\res\\layout\\abc_screen_toolbar.xml"
     },
     {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_quantum_ic_art_track_grey600_48.png.flat",
@@ -4222,10 +4178,6 @@
     {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_list_selector_disabled_holo_dark.9.png.flat",
         "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\723a7dfbe1e4aed5d9348978f12f3308\\res\\drawable-hdpi-v4\\abc_list_selector_disabled_holo_dark.9.png"
-    },
-    {
-        "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\color-v21_abc_btn_colored_borderless_text_material.xml.flat",
-        "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\723a7dfbe1e4aed5d9348978f12f3308\\res\\color-v21\\abc_btn_colored_borderless_text_material.xml"
     },
     {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_media.xml.flat",
@@ -4333,7 +4285,7 @@
     },
     {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_part_time.xml.flat",
-        "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\99c4d8b2b3a6ca2cc19d1104649f56fb\\res\\layout\\notification_template_part_time.xml"
+        "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\cf30aa4fb57664fde0ddc29c52dc3d87\\res\\layout\\notification_template_part_time.xml"
     },
     {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_ic_group_expand_05.png.flat",
@@ -4392,16 +4344,12 @@
         "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\723a7dfbe1e4aed5d9348978f12f3308\\res\\layout\\abc_search_view.xml"
     },
     {
-        "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_tint_btn_checkable.xml.flat",
-        "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\723a7dfbe1e4aed5d9348978f12f3308\\res\\color\\abc_tint_btn_checkable.xml"
-    },
-    {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_btn_switch_to_on_mtrl_00012.9.png.flat",
         "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\723a7dfbe1e4aed5d9348978f12f3308\\res\\drawable-hdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png"
     },
     {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_notification_bg_low_normal.9.png.flat",
-        "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\99c4d8b2b3a6ca2cc19d1104649f56fb\\res\\drawable-hdpi-v4\\notification_bg_low_normal.9.png"
+        "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\cf30aa4fb57664fde0ddc29c52dc3d87\\res\\drawable-hdpi-v4\\notification_bg_low_normal.9.png"
     },
     {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_powered_by_google_dark.png.flat",
@@ -4564,10 +4512,6 @@
         "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\mediarouter-v7-26.1.0.aar\\c4b912098f6391f76e5a48fe3c5aef4a\\res\\drawable-xhdpi-v4\\ic_vol_type_speaker_dark.png"
     },
     {
-        "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_tint_default.xml.flat",
-        "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\723a7dfbe1e4aed5d9348978f12f3308\\res\\color\\abc_tint_default.xml"
-    },
-    {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_ic_group_collapse_06.png.flat",
         "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\mediarouter-v7-26.1.0.aar\\c4b912098f6391f76e5a48fe3c5aef4a\\res\\drawable-xxxhdpi-v4\\ic_group_collapse_06.png"
     },
@@ -4604,10 +4548,6 @@
         "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-cast-framework-12.0.1.aar\\d64b8bf6957fd00f23fc6a301c7689ba\\res\\drawable-mdpi-v4\\quantum_ic_skip_next_white_24.png"
     },
     {
-        "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_btn_colored_material.xml.flat",
-        "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\723a7dfbe1e4aed5d9348978f12f3308\\res\\drawable\\abc_btn_colored_material.xml"
-    },
-    {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_ic_mr_button_connected_18_light.png.flat",
         "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\mediarouter-v7-26.1.0.aar\\c4b912098f6391f76e5a48fe3c5aef4a\\res\\drawable-xxhdpi-v4\\ic_mr_button_connected_18_light.png"
     },
@@ -4625,7 +4565,7 @@
     },
     {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21_notification_action.xml.flat",
-        "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\99c4d8b2b3a6ca2cc19d1104649f56fb\\res\\layout-v21\\notification_action.xml"
+        "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\cf30aa4fb57664fde0ddc29c52dc3d87\\res\\layout-v21\\notification_action.xml"
     },
     {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable_mr_vol_type_audiotrack_light.xml.flat",
@@ -4666,10 +4606,6 @@
     {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_cast_ic_notification_on.png.flat",
         "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-cast-12.0.1.aar\\d08a7750f5bb01465d7c99b8edceb080\\res\\drawable-hdpi-v4\\cast_ic_notification_on.png"
-    },
-    {
-        "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_action.xml.flat",
-        "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\99c4d8b2b3a6ca2cc19d1104649f56fb\\res\\layout\\notification_action.xml"
     },
     {
         "merged": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_places_ic_clear.png.flat",

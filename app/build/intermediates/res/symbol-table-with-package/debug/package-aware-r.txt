@@ -187,6 +187,11 @@ attr elevation
 attr environment
 attr expandActivityOverflowButtonDrawable
 attr externalRouteEnabledDrawable
+attr fastScrollEnabled
+attr fastScrollHorizontalThumbDrawable
+attr fastScrollHorizontalTrackDrawable
+attr fastScrollVerticalThumbDrawable
+attr fastScrollVerticalTrackDrawable
 attr featureType
 attr font
 attr fontFamily
@@ -225,6 +230,7 @@ attr latLngBoundsNorthEastLongitude
 attr latLngBoundsSouthWestLatitude
 attr latLngBoundsSouthWestLongitude
 attr layout
+attr layoutManager
 attr layout_anchor
 attr layout_anchorGravity
 attr layout_behavior
@@ -297,6 +303,7 @@ attr radioButtonStyle
 attr ratingBarStyle
 attr ratingBarStyleIndicator
 attr ratingBarStyleSmall
+attr reverseLayout
 attr schemaOrgProperty
 attr schemaOrgType
 attr scopeUris
@@ -321,11 +328,13 @@ attr showText
 attr showTitle
 attr singleChoiceItemLayout
 attr sourceClass
+attr spanCount
 attr spinBars
 attr spinnerDropDownItemStyle
 attr spinnerStyle
 attr splitTrack
 attr srcCompat
+attr stackFromEnd
 attr state_above_anchor
 attr statusBarBackground
 attr subMenuArrow
@@ -649,6 +658,9 @@ dimen compat_button_padding_vertical_material
 dimen compat_control_corner_material
 dimen disabled_alpha_material_dark
 dimen disabled_alpha_material_light
+dimen fastscroll_default_thickness
+dimen fastscroll_margin
+dimen fastscroll_minimum_range
 dimen highlight_alpha_material_colored
 dimen highlight_alpha_material_dark
 dimen highlight_alpha_material_light
@@ -656,6 +668,9 @@ dimen hint_alpha_material_dark
 dimen hint_alpha_material_light
 dimen hint_pressed_alpha_material_dark
 dimen hint_pressed_alpha_material_light
+dimen item_touch_helper_max_drag_scroll_per_frame
+dimen item_touch_helper_swipe_escape_max_velocity
+dimen item_touch_helper_swipe_escape_velocity
 dimen mr_controller_volume_group_list_item_height
 dimen mr_controller_volume_group_list_item_icon_size
 dimen mr_controller_volume_group_list_max_height
@@ -1252,6 +1267,7 @@ id image
 id imageView
 id index_entity_types
 id info
+id info_text
 id instant_message
 id intent_action
 id intent_activity
@@ -1259,6 +1275,7 @@ id intent_data
 id intent_data_id
 id intent_extra_data
 id italic
+id item_touch_helper_previous_elevation
 id large_icon_uri
 id left
 id light
@@ -1331,6 +1348,7 @@ id rfc822
 id right
 id right_icon
 id right_side
+id rvNumbers
 id sandbox
 id satellite
 id screen
@@ -1471,6 +1489,7 @@ layout place_autocomplete_fragment
 layout place_autocomplete_item_powered_by_google
 layout place_autocomplete_item_prediction
 layout place_autocomplete_progress
+layout recyclerview_item
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
@@ -2026,6 +2045,7 @@ styleable MenuView android_windowAnimationStyle android_itemTextAppearance andro
 styleable PopupWindow android_popupBackground android_popupAnimationStyle overlapAnchor
 styleable PopupWindowBackgroundState state_above_anchor
 styleable RecycleListView paddingBottomNoButtons paddingTopNoTitle
+styleable RecyclerView android_orientation android_descendantFocusability fastScrollEnabled fastScrollHorizontalThumbDrawable fastScrollHorizontalTrackDrawable fastScrollVerticalThumbDrawable fastScrollVerticalTrackDrawable layoutManager reverseLayout spanCount stackFromEnd
 styleable SearchView android_focusable android_maxWidth android_inputType android_imeOptions closeIcon commitIcon defaultQueryHint goIcon iconifiedByDefault layout queryBackground queryHint searchHintIcon searchIcon submitBackground suggestionRowLayout voiceIcon
 styleable Section indexPrefixes noIndex schemaOrgProperty sectionFormat sectionId sectionWeight subsectionSeparator
 styleable SectionFeature featureType

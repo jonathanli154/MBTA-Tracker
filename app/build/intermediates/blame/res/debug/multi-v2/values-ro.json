@@ -72,23 +72,6 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\99c4d8b2b3a6ca2cc19d1104649f56fb\\res\\values-ro\\values-ro.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "109",
-                        "startColumns": "4",
-                        "startOffsets": "12044",
-                        "endColumns": "100",
-                        "endOffsets": "12140"
-                    }
-                },
-                {
                     "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\firebase-messaging-12.0.1.aar\\bc99280a6f43e032934043c9dbfdb603\\res\\values-ro\\values.xml",
                     "from": {
                         "startLines": "4",
@@ -103,6 +86,23 @@
                         "startOffsets": "8773",
                         "endColumns": "105",
                         "endOffsets": "8874"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\cf30aa4fb57664fde0ddc29c52dc3d87\\res\\values-ro\\values-ro.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "109",
+                        "startColumns": "4",
+                        "startOffsets": "12044",
+                        "endColumns": "100",
+                        "endOffsets": "12140"
                     }
                 },
                 {

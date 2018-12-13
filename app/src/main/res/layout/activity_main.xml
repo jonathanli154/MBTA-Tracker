@@ -73,5 +73,10 @@
         map:uiZoomControls="true"
         map:uiZoomGestures="true"/>
 
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvNumbers"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
 
 </LinearLayout>

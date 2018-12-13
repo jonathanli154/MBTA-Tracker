@@ -11,6 +11,8 @@ import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.Menu;
@@ -18,6 +20,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
+import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -64,9 +67,6 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
 
     public final static String DEBUG_TAG="edu.umb.cs443.MYMSG";
 
-    private final String WEATHER_SITE = "http://api.openweathermap.org/data/2.5/weather?APPID=";
-    //private final String WEATHER_API_KEY = "cc4ae6e545dee0a295a471824c9fdbda";
-    private final String WEATHER_API_KEY = "437121d297eab31e4ea07692f0a55b0d";
 
     private final String ICON_SITE = "http://openweathermap.org/img/w/";
 
@@ -86,12 +86,14 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     private HashMap<String, JSONObject> stations;
     private HashMap<String, String> stationIDs;
 
+    MyRecyclerViewAdapter adapter;
+
     private ArrayList<JSONObject> predictions;
 
     private GoogleMap mMap;
     private Marker mSearched;
 
-    private long a = 0, b = 0;
+    private long a = 0, b = 0, c = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -126,7 +128,6 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
             for (int i = 0; i < NUM_ROUTE_TYPES; i++) {
                 //queries[i] = "routes?filter[type]=" + i;
                 new DownloadRoutesTask().execute("routes?filter[type]=" + i);
-                Log.wtf(DEBUG_TAG, "type: " + i);
             }
             //new DownloadRoutesTask().execute(queries);
 
@@ -165,10 +166,11 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                             for (int j = 0; j < jarr.length(); j++) {
                                 JSONObject r = (JSONObject) jarr.get(j);
                                 String id = r.getString("id");
-                                Log.wtf(DEBUG_TAG, id);
                                 new DownloadStationsTask().execute("stops?filter[route]=" + id);
                             }
                         }
+                        c = currentTimeMillis();
+                        Log.wtf(DEBUG_TAG, "" + (c - a));
                     }
 
                     /*
@@ -257,17 +259,12 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                         Log.wtf(DEBUG_TAG, p.toString());
                     }*/
                     JSONObject p = (JSONObject) result.get(0);
-                    JSONObject a = p.getJSONObject("attributes");
-                    String predictionStr = a.getString("departure_time");
-                    if (predictionStr.equals("null")) {
-                        predictionStr = a.getString("arrival_time");
-                    }
-                    ZonedDateTime prediction = getDateTime(predictionStr);
-                    long secondsPrediction = ZonedDateTime.now().until(prediction, SECONDS);
-                    String until = Double.toString(Math.round(secondsPrediction / 6.0) / 10.0);
-                    text.setText(until); //if until < 30sec, use arriving; if < 0, use boarding
-                    Log.wtf(DEBUG_TAG, prediction.toString());
-                    Log.wtf(DEBUG_TAG, ZonedDateTime.now().toString());
+
+                    String eta = getEta(p);
+                    text.setText(eta); //if until < 30sec, use arriving; if < 0, use boarding
+
+                    String[] data = {eta};
+                    setRecyclerViewLayout(data);
                 }
                 catch (Exception e) {
                     Log.e(DEBUG_TAG, "JSON Exception", e);
@@ -356,6 +353,21 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         new DownloadPredictionsTask().execute("predictions?filter[route_type]=1&filter[stop]=" + id);
     }
 
+    public String getEta(JSONObject prediction) throws JSONException{
+        JSONObject a = prediction.getJSONObject("attributes");
+        String predictionStr = a.getString("departure_time");
+        if (predictionStr.equals("null")) {
+            predictionStr = a.getString("arrival_time");
+        }
+        ZonedDateTime predictionTime = getDateTime(predictionStr);
+
+        Log.wtf(DEBUG_TAG, predictionTime.toString());
+        Log.wtf(DEBUG_TAG, ZonedDateTime.now().toString());
+
+        long secondsPrediction = ZonedDateTime.now().until(predictionTime, SECONDS);
+        return Double.toString(Math.round(secondsPrediction / 6.0) / 10.0);
+    }
+
     public ZonedDateTime getDateTime(String str) {
         return ZonedDateTime.parse(str);
         /*
@@ -366,6 +378,15 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         }
         return LocalDateTime.of(ints[0], ints[1], ints[2], ints[3], ints[4], ints[5]);
         */
+    }
+
+    // set up the RecyclerView
+    public void setRecyclerViewLayout(String[] data) {
+        RecyclerView recyclerView = findViewById(R.id.rvNumbers);
+        int numberOfColumns = 3;
+        recyclerView.setLayoutManager(new GridLayoutManager(this, numberOfColumns));
+        adapter = new MyRecyclerViewAdapter(this, data);
+        recyclerView.setAdapter(adapter);
     }
 
     public void initializeStationNameMap() {

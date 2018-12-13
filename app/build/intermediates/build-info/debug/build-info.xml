@@ -5,33 +5,37 @@
     build-mode="COLD"
     density="420dpi"
     format="10"
-    ir-eligibility="COMPATIBLE"
+    ir-eligibility="METHOD_ADDED"
     plugin-version="3.2.1"
-    timestamp="1544636553381"
+    timestamp="1544719788274"
     token="732546371391763842"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="4270" />
+        duration="4526" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="63" />
+        duration="288" />
     <task
         name="verifier"
-        duration="34" />
+        duration="30" />
 
+    <artifact
+        location="C:\Users\lijon\Documents\18fall\CS443\MBTATracker\app\build\intermediates\resources\instant-run\debug\resources-debug.apk"
+        type="SPLIT" />
     <artifact
         location="C:\Users\lijon\Documents\18fall\CS443\MBTATracker\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
         type="SPLIT" />
 
     <build
         build-mode="FULL"
-        timestamp="1544627860110"
-        verifier="FULL_BUILD_REQUESTED" >
+        ir-eligibility="R_CLASS_CHANGE"
+        timestamp="1544716314664"
+        verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="C:\Users\lijon\Documents\18fall\CS443\MBTATracker\app\build\intermediates\resources\instant-run\debug\resources-debug.apk"
             type="SPLIT" />
@@ -39,10 +43,19 @@
             location="C:\Users\lijon\Documents\18fall\CS443\MBTATracker\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\lijon\Documents\18fall\CS443\MBTATracker\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
+            location="C:\Users\lijon\Documents\18fall\CS443\MBTATracker\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\lijon\Documents\18fall\CS443\MBTATracker\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\lijon\Documents\18fall\CS443\MBTATracker\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\lijon\Documents\18fall\CS443\MBTATracker\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\lijon\Documents\18fall\CS443\MBTATracker\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\lijon\Documents\18fall\CS443\MBTATracker\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
@@ -54,19 +67,10 @@
             location="C:\Users\lijon\Documents\18fall\CS443\MBTATracker\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\lijon\Documents\18fall\CS443\MBTATracker\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
-            type="SPLIT" />
-        <artifact
             location="C:\Users\lijon\Documents\18fall\CS443\MBTATracker\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\lijon\Documents\18fall\CS443\MBTATracker\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\lijon\Documents\18fall\CS443\MBTATracker\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\lijon\Documents\18fall\CS443\MBTATracker\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
+            location="C:\Users\lijon\Documents\18fall\CS443\MBTATracker\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\lijon\Documents\18fall\CS443\MBTATracker\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
@@ -74,17 +78,45 @@
     </build>
     <build
         build-mode="COLD"
-        timestamp="1544630273910"
+        ir-eligibility="CLASS_ADDED"
+        timestamp="1544718977250"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="C:\Users\lijon\Documents\18fall\CS443\MBTATracker\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\lijon\Documents\18fall\CS443\MBTATracker\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\lijon\Documents\18fall\CS443\MBTATracker\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\lijon\Documents\18fall\CS443\MBTATracker\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\lijon\Documents\18fall\CS443\MBTATracker\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\lijon\Documents\18fall\CS443\MBTATracker\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\lijon\Documents\18fall\CS443\MBTATracker\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\lijon\Documents\18fall\CS443\MBTATracker\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\lijon\Documents\18fall\CS443\MBTATracker\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
+            type="SPLIT_MAIN" />
+    </build>
+    <build
+        build-mode="COLD"
+        ir-eligibility="METHOD_ADDED"
+        timestamp="1544719788274"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="C:\Users\lijon\Documents\18fall\CS443\MBTATracker\app\build\intermediates\resources\instant-run\debug\resources-debug.apk"
             type="SPLIT" />
-    </build>
-    <build
-        build-mode="COLD"
-        ir-eligibility="COMPATIBLE"
-        timestamp="1544636553381"
-        verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="C:\Users\lijon\Documents\18fall\CS443\MBTATracker\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
             type="SPLIT" />
