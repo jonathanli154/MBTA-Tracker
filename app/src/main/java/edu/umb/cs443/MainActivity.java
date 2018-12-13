@@ -1,5 +1,6 @@
 package edu.umb.cs443;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
@@ -15,6 +16,7 @@ import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -47,11 +49,15 @@ import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.time.LocalDateTime;
+import java.time.ZonedDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
 import static java.lang.System.currentTimeMillis;
+import static java.time.temporal.ChronoUnit.MINUTES;
+import static java.time.temporal.ChronoUnit.SECONDS;
 
 
 public class MainActivity extends FragmentActivity implements OnMapReadyCallback{
@@ -79,6 +85,9 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
 
     private HashMap<String, JSONObject> stations;
     private HashMap<String, String> stationIDs;
+
+    private ArrayList<JSONObject> predictions;
+
     private GoogleMap mMap;
     private Marker mSearched;
 
@@ -157,10 +166,9 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                                 JSONObject r = (JSONObject) jarr.get(j);
                                 String id = r.getString("id");
                                 Log.wtf(DEBUG_TAG, id);
-                                new DownloadWebPageTask().execute("stops?filter[route]=" + id);
+                                new DownloadStationsTask().execute("stops?filter[route]=" + id);
                             }
                         }
-
                     }
 
                     /*
@@ -181,7 +189,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         }
     }
 
-    private class DownloadWebPageTask extends AsyncTask<String, Void, JSONArray> {
+    private class DownloadStationsTask extends AsyncTask<String, Void, JSONArray> {
         @Override
         protected JSONArray doInBackground(String... queries) {
             try {
@@ -224,25 +232,50 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
             }
         }
     }
-    
-    private class DownloadIconTask extends AsyncTask<String, Void, Bitmap> {
-        @Override
-        protected Bitmap doInBackground(String... urls) {
 
-            // params comes from the execute() call: params[0] is the url.
+    private class DownloadPredictionsTask extends AsyncTask<String, Void, JSONArray> {
+        @Override
+        protected JSONArray doInBackground(String... queries) {
             try {
-                return downloadIcon(ICON_SITE + urls[0] + ".png");
-            } catch (IOException e) {
+                a = currentTimeMillis();
+                return getJSONArray(queries[0]);
+            }
+
+            catch (IOException e) {
                 return null;
             }
         }
         // onPostExecute displays the results of the AsyncTask.
         @Override
-        protected void onPostExecute(Bitmap result) {
-            ImageView img=(ImageView) findViewById(R.id.imageView);
-            if(result!=null) img.setImageBitmap(result);
+        protected void onPostExecute(JSONArray result) {
+            TextView text = (TextView) findViewById(R.id.textView);
+            if (result != null) {
+                try {
+                    //JSONObject jobj = new JSONObject(result);
+                    /*for (int i = 0; i < result.length(); i++) {
+                        JSONObject p = (JSONObject) result.get(i);
+                        Log.wtf(DEBUG_TAG, p.toString());
+                    }*/
+                    JSONObject p = (JSONObject) result.get(0);
+                    JSONObject a = p.getJSONObject("attributes");
+                    String predictionStr = a.getString("departure_time");
+                    if (predictionStr.equals("null")) {
+                        predictionStr = a.getString("arrival_time");
+                    }
+                    ZonedDateTime prediction = getDateTime(predictionStr);
+                    long secondsPrediction = ZonedDateTime.now().until(prediction, SECONDS);
+                    String until = Double.toString(Math.round(secondsPrediction / 6.0) / 10.0);
+                    text.setText(until); //if until < 30sec, use arriving; if < 0, use boarding
+                    Log.wtf(DEBUG_TAG, prediction.toString());
+                    Log.wtf(DEBUG_TAG, ZonedDateTime.now().toString());
+                }
+                catch (Exception e) {
+                    Log.e(DEBUG_TAG, "JSON Exception", e);
+                }
+            }
             else{
-                Log.i(DEBUG_TAG, "returned bitmap is null");
+                Log.i(DEBUG_TAG, "returned String is null");
+                text.setText("NA");
             }
         }
     }
@@ -271,6 +304,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     public void ok() {
+        hideKeyboard();
         EditText msgTextField = (EditText) findViewById(R.id.editText);
         String search = msgTextField.getText().toString().toLowerCase();
         String id = stationIDs.get(search);
@@ -278,24 +312,34 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         if (id != null) {
             if (checkConnection()) {
                 try {
+                    //get prediction data
+                    getPredictions(id);
+
+                    //get station info
                     JSONObject jobj = stations.get(id);
                     if (jobj != null) {
-                        Log.wtf(DEBUG_TAG, jobj.toString());
                         JSONObject a = jobj.getJSONObject("attributes");
                         double lat = a.getDouble("latitude");
                         double lng = a.getDouble("longitude");
                         String name = a.getString("name");
                         LatLng loc = new LatLng(lat, lng);
+
+                        //add marker
                         if (mSearched != null) {
                             mSearched.remove();
                         }
-                        mSearched = mMap.addMarker(new MarkerOptions().position(loc).title(name));
+                        mSearched = mMap.addMarker(new MarkerOptions()
+                                .position(loc)
+                                .title(name)
+                                .icon(BitmapDescriptorFactory.fromResource(R.drawable.mbta32))
+                        );
 
                         mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
                         mMap.animateCamera(CameraUpdateFactory.zoomTo(14));
                     } else {
                         Log.wtf(DEBUG_TAG, "jobj null");
                     }
+
                 } catch (JSONException e) {
                     Log.e(DEBUG_TAG, "JSONException: ok");
                 }
@@ -308,9 +352,24 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         }
     }
 
+    public void getPredictions(String id) {
+        new DownloadPredictionsTask().execute("predictions?filter[route_type]=1&filter[stop]=" + id);
+    }
+
+    public ZonedDateTime getDateTime(String str) {
+        return ZonedDateTime.parse(str);
+        /*
+        String[] strs = str.split("[\\-T:]");
+        int[] ints = new int[6];
+        for (int i = 0; i < ints.length; i++) {
+            ints[i] = Integer.parseInt(strs[i]);
+        }
+        return LocalDateTime.of(ints[0], ints[1], ints[2], ints[3], ints[4], ints[5]);
+        */
+    }
+
     public void initializeStationNameMap() {
         stationIDs = new HashMap<String, String>();
-        stationIDs.put("test", "place-alfcl");
         Resources res = getResources();
         String[] arr = res.getStringArray(R.array.stationIDs);
         for (String s: arr) {
@@ -360,41 +419,22 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         return null;
     }
 
-    private Bitmap downloadIcon(String myurl) throws IOException {
-        InputStream is = null;
-
-        try {
-            URL url = new URL(myurl);
-            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-            conn.setReadTimeout(10000 /* milliseconds */);
-            conn.setConnectTimeout(15000 /* milliseconds */);
-            conn.setRequestMethod("GET");
-            conn.setDoInput(true);
-            // Starts the query
-            conn.connect();
-            int response = conn.getResponseCode();
-            Log.i(DEBUG_TAG, "The response is: " + response);
-            is = conn.getInputStream();
-
-            Bitmap bitmap = BitmapFactory.decodeStream(is);
-            return bitmap;
-        }catch(Exception e) {
-            Log.i(DEBUG_TAG, e.toString());
-        }finally {
-            if (is != null) {
-                is.close();
-            }
-        }
-
-        return null;
-    }
-
-
     public boolean checkConnection() {
         ConnectivityManager connMgr = (ConnectivityManager)
                 getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
         return (networkInfo != null && networkInfo.isConnected());
+    }
+
+    public void hideKeyboard() {
+        InputMethodManager imm = (InputMethodManager) getSystemService(Activity.INPUT_METHOD_SERVICE);
+        //Find the currently focused view, so we can grab the correct window token from it.
+        View view = getCurrentFocus();
+        //If no view currently has focus, create a new one, just so we can grab a window token from it
+        if (view == null) {
+            view = new View(this);
+        }
+        imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
     }
 
     @Override
@@ -405,4 +445,5 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.moveCamera(CameraUpdateFactory.newLatLng(dtx));
         mMap.animateCamera(CameraUpdateFactory.zoomTo(10));
     }
+
 }

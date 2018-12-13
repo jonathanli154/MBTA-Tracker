@@ -5,22 +5,78 @@
     <string name="action_settings">Settings</string>
     <string name="button_text">OK</string>
     <string-array name="stationIDs">
+        <item>abington,Abington</item>
+        <item>anderson/woburn,Anderson/ Woburn</item>
+        <item>anderson / woburn,Anderson/ Woburn</item>
+        <item>anderson,Anderson/ Woburn</item>
+        <item>woburn,Anderson/ Woburn</item>
+        <item>anderson woburn,Anderson/ Woburn</item>
+        <item>andover,Andover</item>
         <item>ashland,Ashland</item>
+        <item>attleboro,Attleboro</item>
         <item>auburndale,Auburndale</item>
         <item>ayer,Ayer</item>
+        <item>ballardvale,Ballardvale</item>
+        <item>bellevue,Bellevue</item>
         <item>belmont,Belmont</item>
+        <item>beverly,Beverly</item>
+        <item>beverly depot,Beverly</item>
+        <item>beverly farms,Beverly Farms</item>
         <item>boston landing,Boston Landing</item>
+        <item>bradford,Bradford</item>
         <item>brandeis/roberts,Brandeis/ Roberts</item>
         <item>brandeis,Brandeis/ Roberts</item>
+        <item>bridgewater,Bridgewater</item>
+        <item>brockton,Brockton</item>
+        <item>campello,Campello</item>
+        <item>canton center,Canton Center</item>
+        <item>canton junction,Canton Junction</item>
+        <item>chelsea,Chelsea</item>
+        <item>cohasset,Cohasset</item>
         <item>concord,Concord</item>
+        <item>dedham corp center,Dedham Corp Center</item>
+        <item>dedham,Dedham Corp Center</item>
+        <item>dedham corp,Dedham Corp Center</item>
+        <item>dedham corporate center,Dedham Corp Center</item>
+        <item>dedham corporate,Dedham Corp Center</item>
+        <item>east weymouth,East Weymouth</item>
+        <item>e weymouth,East Weymouth</item>
+        <item>endicott,Endicott</item>
         <item>fairmount,Fairmount</item>
         <item>fitchburg,Fitchburg</item>
+        <item>forge park / 495,Forge Park / 495</item>
+        <item>forge park,Forge Park / 495</item>
+        <item>forge park/495,Forge Park / 495</item>
+        <item>forge park 495,Forge Park / 495</item>
         <item>four corners/geneva,Four Corners / Geneva</item>
         <item>four corners,Four Corners / Geneva</item>
         <item>framingham,Framingham</item>
+        <item>franklin,Franklin</item>
+        <item>gloucester,Gloucester</item>
         <item>grafton,Grafton</item>
+        <item>greenbush,Greenbush</item>
+        <item>greenwood,Greenwood</item>
+        <item>halifax,Halifax</item>
+        <item>hamilton wenham,Hamilton/ Wenham</item>
+        <item>hamilton,Hamilton/ Wenham</item>
+        <item>hamilton/wenham,Hamilton/ Wenham</item>
+        <item>hamilton / wenham,Hamilton/ Wenham</item>
+        <item>hanson,Hanson</item>
         <item>hastings,Hastings</item>
+        <item>haverhill,Haverhill</item>
+        <item>hersey,Hersey</item>
+        <item>highland,Highland</item>
+        <item>holbrook/randolph,Holbrook/ Randolph</item>
+        <item>holbrook / randolph,Holbrook/ Randolph</item>
+        <item>holbrook,Holbrook/ Randolph</item>
+        <item>randolph,Holbrook/ Randolph</item>
+        <item>holbook randolph,Holbrook/ Randolph</item>
+        <item>hyde park,Hyde Park</item>
+        <item>ipswich,Ipswich</item>
+        <item>islington,Islington</item>
         <item>kendal green,Kendal Green</item>
+        <item>kingston,Kingston</item>
+        <item>lawrence,Lawrence</item>
         <item>lincoln,Lincoln</item>
         <item>littleton/rte 495,Littleton / Rte 495</item>
         <item>littleton,Littleton / Rte 495</item>
@@ -28,13 +84,47 @@
         <item>littleton 495,Littleton / Rte 495</item>
         <item>littleton route 495,Littleton / Rte 495</item>
         <item>littleton/route 495,Littleton / Rte 495</item>
+        <item>lowell,Lowell</item>
+        <item>lynn,Lynn</item>
+        <item>manchester,Manchester</item>
+        <item>mansfield,Mansfield</item>
+        <item>melrose cedar park,Melrose Cedar Park</item>
+        <item>melrose,Melrose Cedar Park</item>
+        <item>cedar park,Melrose Cedar Park</item>
+        <item>melrose/cedar park,Melrose Cedar Park</item>
+        <item>melrose / cedar park,Melrose Cedar Park</item>
+        <item>melrose highlands,Melrose Highlands</item>
+        <item>middleborough/lakeville,Middleborough/ Lakeville</item>
+        <item>middleborough,Middleborough/ Lakeville</item>
+        <item>middleborough / lakeville,Middleborough/ Lakeville</item>
+        <item>middleborough lakeville,Middleborough/ Lakeville</item>
+        <item>lakeville,Middleborough/ Lakeville</item>
+        <item>mishawum,Mishawum</item>
+        <item>montello,Montello</item>
+        <item>montserrat,Montserrat</item>
         <item>morton street,Morton Street</item>
         <item>morton st,Morton Street</item>
+        <item>nantasket junction,Nantasket Junction</item>
         <item>natick center,Natick Center</item>
         <item>natick,Natick Center</item>
+        <item>needham center,Needham Center</item>
+        <item>needham heights,Needham Heights</item>
+        <item>needham junction,Needham Junction</item>
+        <item>newburyport,Newburyport</item>
         <item>newmarket,Newmarket</item>
         <item>newtonville,Newtonville</item>
+        <item>norfolk,Norfolk</item>
+        <item>north beverly,North Beverly</item>
+        <item>n beverly,North Beverly</item>
+        <item>north billerica,North Billerica</item>
+        <item>n billerica,North Billerica</item>
         <item>north leominster,North Leominster</item>
+        <item>north scituate,North Scituate</item>
+        <item>n scituate,North Scituate</item>
+        <item>north wilmington,North Wilmington</item>
+        <item>n wilmmington,North Wilmington</item>
+        <item>norwood central,Norwood Central</item>
+        <item>norwood depot,Norwood Depot</item>
         <item>alewife,place-alfcl</item>
         <item>allston street,place-alsgr</item>
         <item>allston st,place-alsgr</item>
@@ -263,31 +353,78 @@
         <item>woodland,place-woodl</item>
         <item>warren street,place-wrnst</item>
         <item>warren st,place-wrnst</item>
+        <item>plimptonville,Plimptonville</item>
+        <item>plymouth,Plymouth</item>
+        <item>prides crossing,Prides Crossing</item>
+        <item>providence,Providence</item>
+        <item>reading,Reading</item>
         <item>readville,Readville</item>
+        <item>river works,River Works / GE Employees Only</item>
+        <item>riverworks,River Works / GE Employees Only</item>
+        <item>rockport,Rockport</item>
+        <item>roslindale village,Roslindale Village</item>
+        <item>roslindale,Roslindale Village</item>
+        <item>route 128,Route 128</item>
+        <item>128,Route 128</item>
+        <item>rowley,Rowley</item>
+        <item>salem,Salem</item>
+        <item>sharon,Sharon</item>
         <item>shirley,Shirley</item>
         <item>silver hill,Silver Hill</item>
         <item>south acton,South Acton</item>
         <item>s acton,South Acton</item>
+        <item>south attleboro,South Attleboro</item>
+        <item>s attleboro,South Attleboro</item>
+        <item>south weymouth,South Weymouth</item>
+        <item>s weymouth,South Weymouth</item>
         <item>southborough,Southborough</item>
+        <item>stoughton,Stoughton</item>
+        <item>swampscott,Swampscott</item>
         <item>talbot avenue,Talbot Avenue</item>
         <item>talbot ave,Talbot Avenue</item>
         <item>talbot av,Talbot Avenue</item>
+        <item>tf green airport,TF Green Airport</item>
+        <item>tf green,TF Green Airport</item>
         <item>uphams corner,Uphams Corner</item>
         <item>wachusett,Wachusett</item>
+        <item>wakefield,Wakefield</item>
+        <item>walpole,Walpole</item>
         <item>waltham,Waltham</item>
         <item>waverley,Waverley</item>
+        <item>wedgemere,Wedgemere</item>
         <item>wellesley farms,Wellesley Farms</item>
         <item>wellesley hills,Wellesley Hills</item>
         <item>wellesley square,Wellesley Square</item>
         <item>wellesley sq,Wellesley Square</item>
         <item>west concord,West Concord</item>
         <item>w concord,West Concord</item>
+        <item>west gloucester,West Gloucester</item>
+        <item>w gloucester,West Gloucester</item>
+        <item>west hingham,West Hingham</item>
+        <item>w hingham,West Hingham</item>
+        <item>west medford,West Medford</item>
+        <item>w medford,West Medford</item>
         <item>west natick,West Natick</item>
         <item>w natick,West Natick</item>
         <item>west newton,West Newton</item>
         <item>w newton,West Newton</item>
+        <item>west roxbury,West Roxbury</item>
+        <item>w roxbury,West Roxbury</item>
         <item>westborough,Westborough</item>
+        <item>weymouth landing/east braintree,Weymouth Landing/ East Braintree</item>
+        <item>weymouth landing,Weymouth Landing/ East Braintree</item>
+        <item>east braintree,Weymouth Landing/ East Braintree</item>
+        <item>e braintree,Weymouth Landing/ East Braintree</item>
+        <item>weymouth landing / east braintree,Weymouth Landing/ East Braintree</item>
+        <item>weymouth landing east braintree,Weymouth Landing/ East Braintree</item>
+        <item>whitman,Whitman</item>
+        <item>wickford junction,Wickford Junction</item>
+        <item>wilmington,Wilmington</item>
+        <item>winchester center,Winchester Center</item>
+        <item>winchester center,Winchester Center</item>
+        <item>windsor gardens,Windsor Gardens</item>
         <item>worcester,Worcester</item>
+        <item>wyoming hill,Wyoming Hill</item>
         <item>yawkey,Yawkey</item>
     </string-array>
 </resources>
