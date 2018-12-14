@@ -6,6 +6,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="MBTA Tracker"
+        android:id="@+id/textView"
+        android:textSize="32dp" />
 
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -33,30 +40,6 @@
 
     </RelativeLayout>
 
-
-
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
-
-        <ImageView
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:id="@+id/imageView"
-            android:layout_alignBottom="@+id/textView"
-            android:layout_toRightOf="@+id/textView"
-            android:layout_gravity="center_horizontal"
-            android:paddingLeft="10dp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="NA"
-            android:id="@+id/textView"
-            android:textSize="50dp" />
-
-    </RelativeLayout>
     <fragment
         android:id="@+id/map"
         android:layout_width="match_parent"
@@ -74,7 +57,7 @@
         map:uiZoomGestures="true"/>
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/rvNumbers"
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 

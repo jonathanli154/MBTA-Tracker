@@ -67,9 +67,6 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
 
     public final static String DEBUG_TAG="edu.umb.cs443.MYMSG";
 
-
-    private final String ICON_SITE = "http://openweathermap.org/img/w/";
-
     private final String MBTA_URL_START = "https://api-v3.mbta.com/";
     private final String MBTA_API_KEY = "6c46d81ddbeb4280a1b08c417a24d287";
 
@@ -88,7 +85,9 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
 
     MyRecyclerViewAdapter adapter;
 
-    private ArrayList<JSONObject> predictions;
+    private String[] predictions;
+
+    private final int MAX_ROWS = 100;
 
     private GoogleMap mMap;
     private Marker mSearched;
@@ -97,6 +96,8 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.i(DEBUG_TAG, "starting");
+        a = currentTimeMillis();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -117,8 +118,16 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
             }
         });
 
+        Log.i(DEBUG_TAG, "" + (currentTimeMillis() - a));
         routes = new ArrayList<JSONArray>();
         stations = new HashMap<String, JSONObject>();
+        predictions = new String[MAX_ROWS * 3];
+        predictions[0] = "LINE";
+        predictions[1] = "DESTINATION";
+        predictions[2] = "ETA";
+        Log.i(DEBUG_TAG, "" + (currentTimeMillis() - a));
+        setRecyclerViewLayout(predictions);
+        Log.i(DEBUG_TAG, "" + (currentTimeMillis() - a));
         initializeStationNameMap();
         if (checkConnection()) {
             /*
@@ -137,12 +146,10 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         }
     }
 
-
     private class DownloadRoutesTask extends AsyncTask<String, Void, JSONArray> {
         @Override
         protected JSONArray doInBackground(String... queries) {
             try {
-                a = currentTimeMillis();
                 return getJSONArray(queries[0]);
             }
 
@@ -153,7 +160,6 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         // onPostExecute displays the results of the AsyncTask.
         @Override
         protected void onPostExecute(JSONArray result) {
-            TextView text = (TextView) findViewById(R.id.textView);
             if (result != null) {
                 try {
                     //JSONObject jobj = new JSONObject(result);
@@ -185,8 +191,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                 }
             }
             else{
-                Log.i(DEBUG_TAG, "returned String is null");
-                text.setText("NA");
+                Log.e(DEBUG_TAG, "returned String is null");
             }
         }
     }
@@ -195,7 +200,6 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         @Override
         protected JSONArray doInBackground(String... queries) {
             try {
-                a = currentTimeMillis();
                 return getJSONArray(queries[0]);
             }
 
@@ -206,7 +210,6 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         // onPostExecute displays the results of the AsyncTask.
         @Override
         protected void onPostExecute(JSONArray result) {
-            TextView text = (TextView) findViewById(R.id.textView);
             if (result != null) {
                 try {
                     //JSONObject jobj = new JSONObject(result);
@@ -217,20 +220,14 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                         String id = station.getString("id");
                         stations.put(id, station);
                     }
-                    /*
-                    double[] coord = getCoord(jobj);
-                    CameraUpdate center=CameraUpdateFactory.newLatLng(new LatLng(coord[0], coord[1]));
-                    CameraUpdate zoom=CameraUpdateFactory.zoomTo(12);
-                    mMap.moveCamera(center);
-                    mMap.animateCamera(zoom);*/
+                    Log.wtf(DEBUG_TAG, "ready " + (currentTimeMillis() - a));
                 }
                 catch (Exception e) {
                     Log.e(DEBUG_TAG, "JSON Exception", e);
                 }
             }
             else{
-                Log.i(DEBUG_TAG, "returned String is null");
-                text.setText("NA");
+                Log.e(DEBUG_TAG, "returned String is null");
             }
         }
     }
@@ -239,7 +236,6 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         @Override
         protected JSONArray doInBackground(String... queries) {
             try {
-                a = currentTimeMillis();
                 return getJSONArray(queries[0]);
             }
 
@@ -250,29 +246,71 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         // onPostExecute displays the results of the AsyncTask.
         @Override
         protected void onPostExecute(JSONArray result) {
-            TextView text = (TextView) findViewById(R.id.textView);
             if (result != null) {
                 try {
-                    //JSONObject jobj = new JSONObject(result);
-                    /*for (int i = 0; i < result.length(); i++) {
+                    int row = 1;
+                    for (int i = 0; i < result.length() && i < MAX_ROWS; i++) {
                         JSONObject p = (JSONObject) result.get(i);
-                        Log.wtf(DEBUG_TAG, p.toString());
-                    }*/
-                    JSONObject p = (JSONObject) result.get(0);
 
-                    String eta = getEta(p);
-                    text.setText(eta); //if until < 30sec, use arriving; if < 0, use boarding
+                        String route = getRoute(p);
+                        String trip = getTrip(p);
+                        String eta = getEta(p);
 
-                    String[] data = {eta};
-                    setRecyclerViewLayout(data);
+                        if (eta != null) { //not the last station for this prediction
+                            predictions[row * 3] = route;
+                            new DownloadTripTask().execute((row * 3 + 1) + ",trips/" + trip);
+                            Log.e(DEBUG_TAG, trip);
+                            predictions[row * 3 + 2] = eta;
+                            adapter.notifyItemRangeChanged(row * 3, 3);
+                            row++;
+                        }
+                    }
+                }
+                catch (JSONException e) {
+                    Log.e(DEBUG_TAG, "JSON Exception", e);
+                }
+
+                catch (Exception e) {
+                    Log.e(DEBUG_TAG,"Exception", e);
+                }
+            }
+            else{
+                Log.e(DEBUG_TAG, "returned String is null");
+            }
+        }
+    }
+
+    private class DownloadTripTask extends AsyncTask<String, Void, JSONObject> {
+        int loc;
+        @Override
+        protected JSONObject doInBackground(String... queries) {
+            try {
+                String[] split = queries[0].split(",");
+                loc = Integer.parseInt(split[0]);
+                return getJSONObject(split[1]);
+            }
+
+            catch (IOException e) {
+                return null;
+            }
+        }
+        // onPostExecute displays the results of the AsyncTask.
+        @Override
+        protected void onPostExecute(JSONObject result) {
+            if (result != null) {
+                try {
+                    JSONObject t = result.getJSONObject("data");
+                    String destination = getDestination(t);
+
+                    predictions[loc] = destination;
+                    adapter.notifyItemRangeChanged(loc,1);
                 }
                 catch (Exception e) {
                     Log.e(DEBUG_TAG, "JSON Exception", e);
                 }
             }
             else{
-                Log.i(DEBUG_TAG, "returned String is null");
-                text.setText("NA");
+                Log.e(DEBUG_TAG, "returned String is null");
             }
         }
     }
@@ -309,36 +347,22 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         if (id != null) {
             if (checkConnection()) {
                 try {
+                    clearRecyclerView();
                     //get prediction data
                     getPredictions(id);
 
-                    //get station info
+                    //add marker
                     JSONObject jobj = stations.get(id);
                     if (jobj != null) {
-                        JSONObject a = jobj.getJSONObject("attributes");
-                        double lat = a.getDouble("latitude");
-                        double lng = a.getDouble("longitude");
-                        String name = a.getString("name");
-                        LatLng loc = new LatLng(lat, lng);
-
-                        //add marker
-                        if (mSearched != null) {
-                            mSearched.remove();
-                        }
-                        mSearched = mMap.addMarker(new MarkerOptions()
-                                .position(loc)
-                                .title(name)
-                                .icon(BitmapDescriptorFactory.fromResource(R.drawable.mbta32))
-                        );
-
-                        mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
-                        mMap.animateCamera(CameraUpdateFactory.zoomTo(14));
+                        addMarker(jobj);
                     } else {
                         Log.wtf(DEBUG_TAG, "jobj null");
                     }
 
                 } catch (JSONException e) {
                     Log.e(DEBUG_TAG, "JSONException: ok");
+                } catch (Exception e) {
+                    Log.e(DEBUG_TAG, "error", e);
                 }
             } else {
                 Log.e(DEBUG_TAG, "No network connection");
@@ -350,22 +374,75 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     public void getPredictions(String id) {
-        new DownloadPredictionsTask().execute("predictions?filter[route_type]=1&filter[stop]=" + id);
+        new DownloadPredictionsTask().execute("predictions?sort=departure_time&filter[route_type]=0,1,2&filter[stop]=" + id);
     }
 
-    public String getEta(JSONObject prediction) throws JSONException{
-        JSONObject a = prediction.getJSONObject("attributes");
-        String predictionStr = a.getString("departure_time");
-        if (predictionStr.equals("null")) {
-            predictionStr = a.getString("arrival_time");
+    public void addMarker(JSONObject station) throws JSONException {
+        JSONObject a = station.getJSONObject("attributes");
+        double lat = a.getDouble("latitude");
+        double lng = a.getDouble("longitude");
+        String name = a.getString("name");
+        LatLng loc = new LatLng(lat, lng);
+
+        //add marker
+        if (mSearched != null) {
+            mSearched.remove();
         }
+        mSearched = mMap.addMarker(new MarkerOptions()
+                .position(loc)
+                .title(name)
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.mbta32))
+        );
+
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
+        mMap.animateCamera(CameraUpdateFactory.zoomTo(14));
+    }
+
+    //methods to retrieve data from JSONObjects
+    public String getRoute(JSONObject prediction) throws JSONException {
+        JSONObject r = prediction.getJSONObject("relationships");
+        JSONObject route = r.getJSONObject("route");
+        JSONObject data = route.getJSONObject("data");
+        String str = data.getString("id");
+        return (str.substring(0, 3).equals("CR-") ? str.substring(3, str.length()) : str);
+    }
+
+    public String getTrip(JSONObject prediction) throws JSONException {
+        JSONObject r = prediction.getJSONObject("relationships");
+        JSONObject trip = r.getJSONObject("trip");
+        JSONObject data = trip.getJSONObject("data");
+        return data.getString("id");
+    }
+
+    public String getDestination(JSONObject trip) throws JSONException {
+        JSONObject a = trip.getJSONObject("attributes");
+        return a.getString("headsign");
+    }
+
+    public String getEta(JSONObject prediction) throws JSONException {
+
+        JSONObject a = prediction.getJSONObject("attributes");
+        String departureTime = a.getString("departure_time");
+        if (departureTime.equals("null")) {
+            return null; //last stop, ETA shouldn't be displayed
+        }
+        String arrivalTime = a.getString("arrival_time");
+        boolean firstStop = arrivalTime.equals("null"); //if no arrival time, then this is the first stop
+        String predictionStr = (firstStop ? departureTime : arrivalTime);
+
         ZonedDateTime predictionTime = getDateTime(predictionStr);
 
         Log.wtf(DEBUG_TAG, predictionTime.toString());
         Log.wtf(DEBUG_TAG, ZonedDateTime.now().toString());
 
         long secondsPrediction = ZonedDateTime.now().until(predictionTime, SECONDS);
-        return Double.toString(Math.round(secondsPrediction / 6.0) / 10.0);
+        if (secondsPrediction <= 0) {
+            return "Boarding";
+        }
+        else if (secondsPrediction <= 30) {
+            return (firstStop ? "Boarding" : "Arriving"); //if eta < 30sec, use arriving; if < 0, use boarding
+        }
+        return Long.toString(secondsPrediction / 60) + " min " + Long.toString((secondsPrediction % 60) / 10 * 10) + " sec";
     }
 
     public ZonedDateTime getDateTime(String str) {
@@ -382,11 +459,30 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
 
     // set up the RecyclerView
     public void setRecyclerViewLayout(String[] data) {
-        RecyclerView recyclerView = findViewById(R.id.rvNumbers);
+        RecyclerView recyclerView = findViewById(R.id.recyclerView);
         int numberOfColumns = 3;
         recyclerView.setLayoutManager(new GridLayoutManager(this, numberOfColumns));
         adapter = new MyRecyclerViewAdapter(this, data);
         recyclerView.setAdapter(adapter);
+    }
+
+    public void clearRecyclerView() {
+        for (int i = 5; i < predictions.length; i += 3) {
+            boolean cleared = true;
+            for (int j = i - 2; j <= i; j++) {
+                if (predictions[j] != null && !predictions[j].equals("")) {
+                    cleared = false;
+                }
+            }
+            if (cleared) {
+                i = predictions.length;
+            }
+            else {
+                for (int k = i - 2; k <= i; k++) {
+                    predictions[k] = "";
+                }
+            }
+        }
     }
 
     public void initializeStationNameMap() {
@@ -399,12 +495,38 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         }
     }
 
+
     public JSONArray getJSONArray(String query) throws IOException {
-        String url = MBTA_URL_START + query + "&api_key=" + MBTA_API_KEY;
+        try {
+            JSONObject jobj = getJSONObject(query);
+            return jobj.getJSONArray("data");
+        }
+
+        catch (JSONException e) {
+            Log.e(DEBUG_TAG, "JSON Exception", e);
+            return null;
+        }
+    }
+
+    public JSONObject getJSONObject(String query) throws IOException {
+        try {
+            String sb = getJSON(query);
+            return new JSONObject(sb);
+        }
+
+        catch (JSONException e) {
+            Log.e(DEBUG_TAG, "JSON Exception", e);
+            return null;
+        }
+    }
+
+    public String getJSON(String query) throws IOException {
+        String url = MBTA_URL_START + query;
+        url += (query.contains("?") ? "&" : "?");
+        url += "api_key=" + MBTA_API_KEY;
         //Log.wtf(DEBUG_TAG, url);
         if (checkConnection()) {
             try {
-
                 URL u = new URL(url);
                 HttpURLConnection conn = (HttpURLConnection) u.openConnection();
                 conn.setReadTimeout(10000 /* milliseconds */);
@@ -418,23 +540,12 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                 while ((inputStr = streamReader.readLine()) != null) {
                     sb.append(inputStr);
                 }
-                JSONObject jobj = new JSONObject(sb.toString());
                 streamReader.close();
-                return jobj.getJSONArray("data");
+                return sb.toString();
 
-
-                /*
-                Reader reader = new InputStreamReader(in, "UTF-8");
-                char[] buffer = new char[4096];
-                reader.read(buffer);
-                data = new String(buffer);*/
             }
             catch (MalformedURLException e) {
                 Log.e(DEBUG_TAG, "Malformed URL", e);
-            }
-
-            catch (JSONException e) {
-                Log.e(DEBUG_TAG, "JSON Exception", e);
             }
         }
         return null;

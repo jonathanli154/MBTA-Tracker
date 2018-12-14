@@ -1264,7 +1264,6 @@ id icon_uri
 id icon_view
 id ifRoom
 id image
-id imageView
 id index_entity_types
 id info
 id info_text
@@ -1344,11 +1343,11 @@ id progressBar
 id progress_circular
 id progress_horizontal
 id radio
+id recyclerView
 id rfc822
 id right
 id right_icon
 id right_side
-id rvNumbers
 id sandbox
 id satellite
 id screen
