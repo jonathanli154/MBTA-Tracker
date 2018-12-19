@@ -409,8 +409,6 @@ MERGED from [com.google.android.gms:play-services-wearable-license:12.0.1] C:\Us
 		ADDED from C:\Users\lijon\Documents\18fall\CS443\MBTATracker\app\src\main\AndroidManifest.xml:20:9-45
 	android:allowBackup
 		ADDED from C:\Users\lijon\Documents\18fall\CS443\MBTATracker\app\src\main\AndroidManifest.xml:19:9-35
-	android:theme
-		ADDED from C:\Users\lijon\Documents\18fall\CS443\MBTATracker\app\src\main\AndroidManifest.xml:22:9-40
 activity#edu.umb.cs443.MainActivity
 ADDED from C:\Users\lijon\Documents\18fall\CS443\MBTATracker\app\src\main\AndroidManifest.xml:23:9-31:20
 	android:label

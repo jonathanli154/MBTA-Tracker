@@ -11,6 +11,7 @@ import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -87,7 +88,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
 
     private String[] predictions;
 
-    private final int MAX_ROWS = 100;
+    private final int MAX_ROWS = 32;
 
     private GoogleMap mMap;
     private Marker mSearched;
@@ -107,10 +108,8 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         EditText edittext=(EditText)findViewById(R.id.editText);
         edittext.setOnKeyListener(new View.OnKeyListener() {
             public boolean onKey(View v, int keyCode, KeyEvent event) {
-                // If the event is a key-down event on the "enter" button
                 if ((event.getAction() == KeyEvent.ACTION_DOWN) &&
                         (keyCode == KeyEvent.KEYCODE_ENTER)) {
-                    // Perform action on key press
                     ok();
                     return true;
                 }
@@ -130,16 +129,11 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         Log.i(DEBUG_TAG, "" + (currentTimeMillis() - a));
         initializeStationNameMap();
         if (checkConnection()) {
-            /*
-            String query = "routes?filter[type]=1";
-            new DownloadRoutesTask().execute(query);*/
             String[] queries = new String[NUM_ROUTE_TYPES];
             for (int i = 0; i < NUM_ROUTE_TYPES; i++) {
                 //queries[i] = "routes?filter[type]=" + i;
                 new DownloadRoutesTask().execute("routes?filter[type]=" + i);
             }
-            //new DownloadRoutesTask().execute(queries);
-
         }
         else {
             Log.e(DEBUG_TAG, "No network connection");
@@ -162,11 +156,10 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         protected void onPostExecute(JSONArray result) {
             if (result != null) {
                 try {
-                    //JSONObject jobj = new JSONObject(result);
                     routes.add(result);
                     if (routes.size() == NUM_ROUTE_TYPES) {
                         b = currentTimeMillis();
-                        Log.wtf(DEBUG_TAG, "" + (b - a));
+                        Log.i(DEBUG_TAG, "" + (b - a));
                         for (int i = 0; i < 3; i++) {
                             JSONArray jarr = routes.get(i);
                             for (int j = 0; j < jarr.length(); j++) {
@@ -176,15 +169,8 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                             }
                         }
                         c = currentTimeMillis();
-                        Log.wtf(DEBUG_TAG, "" + (c - a));
+                        Log.i(DEBUG_TAG, "" + (c - a));
                     }
-
-                    /*
-                    double[] coord = getCoord(jobj);
-                    CameraUpdate center=CameraUpdateFactory.newLatLng(new LatLng(coord[0], coord[1]));
-                    CameraUpdate zoom=CameraUpdateFactory.zoomTo(12);
-                    mMap.moveCamera(center);
-                    mMap.animateCamera(zoom);*/
                 }
                 catch (Exception e) {
                     Log.e(DEBUG_TAG, "JSON Exception", e);
@@ -212,7 +198,6 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         protected void onPostExecute(JSONArray result) {
             if (result != null) {
                 try {
-                    //JSONObject jobj = new JSONObject(result);
                     for (int i = 0; i < result.length(); i++) {
                         JSONObject station = (JSONObject) result.get(i);
                         JSONObject a = station.getJSONObject("attributes");
@@ -220,7 +205,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                         String id = station.getString("id");
                         stations.put(id, station);
                     }
-                    Log.wtf(DEBUG_TAG, "ready " + (currentTimeMillis() - a));
+                    Log.i(DEBUG_TAG, "ready " + (currentTimeMillis() - a));
                 }
                 catch (Exception e) {
                     Log.e(DEBUG_TAG, "JSON Exception", e);
@@ -243,13 +228,13 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                 return null;
             }
         }
-        // onPostExecute displays the results of the AsyncTask.
+
         @Override
         protected void onPostExecute(JSONArray result) {
             if (result != null) {
                 try {
                     int row = 1;
-                    for (int i = 0; i < result.length() && i < MAX_ROWS; i++) {
+                    for (int i = 0; i < result.length() && row < MAX_ROWS; i++) {
                         JSONObject p = (JSONObject) result.get(i);
 
                         String route = getRoute(p);
@@ -259,7 +244,6 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                         if (eta != null) { //not the last station for this prediction
                             predictions[row * 3] = route;
                             new DownloadTripTask().execute((row * 3 + 1) + ",trips/" + trip);
-                            Log.e(DEBUG_TAG, trip);
                             predictions[row * 3 + 2] = eta;
                             adapter.notifyItemRangeChanged(row * 3, 3);
                             row++;
@@ -294,7 +278,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                 return null;
             }
         }
-        // onPostExecute displays the results of the AsyncTask.
+
         @Override
         protected void onPostExecute(JSONObject result) {
             if (result != null) {
@@ -317,16 +301,14 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
+        //if decide to add menu items in the future
+        //getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
+        //handle action bar items
         int id = item.getItemId();
         if (id == R.id.action_settings) {
             return true;
@@ -343,7 +325,6 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         EditText msgTextField = (EditText) findViewById(R.id.editText);
         String search = msgTextField.getText().toString().toLowerCase();
         String id = stationIDs.get(search);
-        Log.wtf(DEBUG_TAG, id);
         if (id != null) {
             if (checkConnection()) {
                 try {
@@ -356,7 +337,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                     if (jobj != null) {
                         addMarker(jobj);
                     } else {
-                        Log.wtf(DEBUG_TAG, "jobj null");
+                        Log.e(DEBUG_TAG, "jobj null");
                     }
 
                 } catch (JSONException e) {
@@ -369,7 +350,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
             }
         }
         else {
-            Log.wtf(DEBUG_TAG, "search term not found");
+            Log.e(DEBUG_TAG, "search term not found");
         }
     }
 
@@ -432,9 +413,6 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
 
         ZonedDateTime predictionTime = getDateTime(predictionStr);
 
-        Log.wtf(DEBUG_TAG, predictionTime.toString());
-        Log.wtf(DEBUG_TAG, ZonedDateTime.now().toString());
-
         long secondsPrediction = ZonedDateTime.now().until(predictionTime, SECONDS);
         if (secondsPrediction <= 0) {
             return "Boarding";
@@ -447,26 +425,24 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
 
     public ZonedDateTime getDateTime(String str) {
         return ZonedDateTime.parse(str);
-        /*
-        String[] strs = str.split("[\\-T:]");
-        int[] ints = new int[6];
-        for (int i = 0; i < ints.length; i++) {
-            ints[i] = Integer.parseInt(strs[i]);
-        }
-        return LocalDateTime.of(ints[0], ints[1], ints[2], ints[3], ints[4], ints[5]);
-        */
     }
 
     // set up the RecyclerView
     public void setRecyclerViewLayout(String[] data) {
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
         int numberOfColumns = 3;
-        recyclerView.setLayoutManager(new GridLayoutManager(this, numberOfColumns));
+        GridLayoutManager layoutManager = new GridLayoutManager(this, numberOfColumns);
+        recyclerView.setLayoutManager(layoutManager);
         adapter = new MyRecyclerViewAdapter(this, data);
         recyclerView.setAdapter(adapter);
+        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(recyclerView.getContext(),
+                layoutManager.getOrientation());
+        recyclerView.addItemDecoration(dividerItemDecoration);
     }
 
     public void clearRecyclerView() {
+        RecyclerView recyclerView = findViewById(R.id.recyclerView);
+        recyclerView.scrollToPosition(0);
         for (int i = 5; i < predictions.length; i += 3) {
             boolean cleared = true;
             for (int j = i - 2; j <= i; j++) {
@@ -483,6 +459,8 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                 }
             }
         }
+
+        adapter.notifyItemRangeChanged(0, MAX_ROWS * 3);
     }
 
     public void initializeStationNameMap() {
@@ -524,7 +502,6 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         String url = MBTA_URL_START + query;
         url += (query.contains("?") ? "&" : "?");
         url += "api_key=" + MBTA_API_KEY;
-        //Log.wtf(DEBUG_TAG, url);
         if (checkConnection()) {
             try {
                 URL u = new URL(url);
@@ -560,9 +537,9 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
 
     public void hideKeyboard() {
         InputMethodManager imm = (InputMethodManager) getSystemService(Activity.INPUT_METHOD_SERVICE);
-        //Find the currently focused view, so we can grab the correct window token from it.
+
         View view = getCurrentFocus();
-        //If no view currently has focus, create a new one, just so we can grab a window token from it
+
         if (view == null) {
             view = new View(this);
         }
@@ -573,9 +550,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     public void onMapReady(GoogleMap map) {
         this.mMap = map;
         LatLng dtx = new LatLng(42.3555, -71.0605);
-        //mMap.addMarker(new MarkerOptions().position(dtx).title("Marker in Downtown Crossing"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(dtx));
         mMap.animateCamera(CameraUpdateFactory.zoomTo(10));
     }
-
 }
