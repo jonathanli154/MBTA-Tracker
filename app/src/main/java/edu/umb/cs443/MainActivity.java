@@ -33,6 +33,7 @@ import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
@@ -87,11 +88,14 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     MyRecyclerViewAdapter adapter;
 
     private String[] predictions;
+    private ArrayList<JSONObject> predictionData;
 
     private final int MAX_ROWS = 32;
 
     private GoogleMap mMap;
     private Marker mSearched;
+    private Marker mVehicle;
+    private LatLng searchedLoc;
 
     private long a = 0, b = 0, c = 0;
 
@@ -124,6 +128,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         predictions[0] = "LINE";
         predictions[1] = "DESTINATION";
         predictions[2] = "ETA";
+        predictionData = new ArrayList<JSONObject>();
         Log.i(DEBUG_TAG, "" + (currentTimeMillis() - a));
         setRecyclerViewLayout(predictions);
         Log.i(DEBUG_TAG, "" + (currentTimeMillis() - a));
@@ -241,7 +246,8 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                         String trip = getTrip(p);
                         String eta = getEta(p);
 
-                        if (eta != null) { //not the last station for this prediction
+                        if (eta != null) { //not the last station for this predictionj
+                            predictionData.add(p);
                             predictions[row * 3] = route;
                             new DownloadTripTask().execute((row * 3 + 1) + ",trips/" + trip);
                             predictions[row * 3 + 2] = eta;
@@ -299,6 +305,35 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         }
     }
 
+    private class DownloadVehicleTask extends AsyncTask<String, Void, JSONObject> {
+        @Override
+        protected JSONObject doInBackground(String... queries) {
+            try {
+                return getJSONObject(queries[0]);
+            }
+
+            catch (IOException e) {
+                return null;
+            }
+        }
+        @Override
+        protected void onPostExecute(JSONObject result) {
+            if (result != null) {
+                try {
+                    JSONObject v = result.getJSONObject("data");
+                    setVehicleMarker(v);
+
+                }
+                catch (Exception e) {
+                    Log.e(DEBUG_TAG, "JSON Exception", e);
+                }
+            }
+            else{
+                Log.e(DEBUG_TAG, "returned String is null");
+            }
+        }
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         //if decide to add menu items in the future
@@ -329,6 +364,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
             if (checkConnection()) {
                 try {
                     clearRecyclerView();
+                    predictionData.clear();
                     //get prediction data
                     getPredictions(id);
 
@@ -355,7 +391,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     public void getPredictions(String id) {
-        new DownloadPredictionsTask().execute("predictions?sort=departure_time&filter[route_type]=0,1,2&filter[stop]=" + id);
+        new DownloadPredictionsTask().execute("predictions?include=vehicle&sort=departure_time&filter[route_type]=0,1,2&filter[stop]=" + id);
     }
 
     public void addMarker(JSONObject station) throws JSONException {
@@ -363,19 +399,24 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         double lat = a.getDouble("latitude");
         double lng = a.getDouble("longitude");
         String name = a.getString("name");
-        LatLng loc = new LatLng(lat, lng);
+        searchedLoc = new LatLng(lat, lng);
 
-        //add marker
+        //remove previous markers
         if (mSearched != null) {
             mSearched.remove();
         }
+        if (mVehicle != null) {
+            mVehicle.remove();
+        }
+
+        //add marker
         mSearched = mMap.addMarker(new MarkerOptions()
-                .position(loc)
+                .position(searchedLoc)
                 .title(name)
                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.mbta32))
         );
 
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(searchedLoc));
         mMap.animateCamera(CameraUpdateFactory.zoomTo(14));
     }
 
@@ -414,17 +455,61 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         ZonedDateTime predictionTime = getDateTime(predictionStr);
 
         long secondsPrediction = ZonedDateTime.now().until(predictionTime, SECONDS);
+
+        //if eta < 30sec, return "arriving"; if < 0, return "boarding"
         if (secondsPrediction <= 0) {
             return "Boarding";
         }
         else if (secondsPrediction <= 30) {
-            return (firstStop ? "Boarding" : "Arriving"); //if eta < 30sec, use arriving; if < 0, use boarding
+            return (firstStop ? "Boarding" : "Arriving");
         }
-        return Long.toString(secondsPrediction / 60) + " min " + Long.toString((secondsPrediction % 60) / 10 * 10) + " sec";
+        return Long.toString(secondsPrediction / 60) + " min " +
+                Long.toString((secondsPrediction % 60) / 10 * 10) + " sec";
     }
 
     public ZonedDateTime getDateTime(String str) {
         return ZonedDateTime.parse(str);
+    }
+
+    public String getVehicle(JSONObject prediction) throws JSONException {
+        JSONObject r = prediction.getJSONObject("relationships");
+        try {
+            JSONObject v = r.getJSONObject("vehicle");
+            JSONObject data = v.getJSONObject("data");
+            return data.getString("id");
+        }
+        catch (Exception e) {
+            Log.e(DEBUG_TAG, "Vehicle not found");
+            //Log.e(DEBUG_TAG, r.toString());
+        }
+        return "";
+    }
+
+    public void setVehicleMarker(JSONObject v) throws JSONException {
+        JSONObject a = v.getJSONObject("attributes");
+        double vLat = a.getDouble("latitude");
+        double vLon = a.getDouble("longitude");
+        LatLng vLoc = new LatLng(vLat, vLon);
+
+        if (mVehicle != null) {
+            mVehicle.remove();
+        }
+        mVehicle = mMap.addMarker(new MarkerOptions()
+                .position(vLoc)
+                .title("vehicle")
+        );
+        double sLat = searchedLoc.latitude;
+        double sLon = searchedLoc.longitude;
+        double north = sLat + Math.abs(vLat - sLat);
+        double south = sLat - Math.abs(vLat - sLat);
+        double east = sLon + Math.abs(vLon - sLon);
+        double west = sLon - Math.abs(vLon - sLon);
+
+        LatLngBounds bounds = new LatLngBounds(new LatLng(south, west), new LatLng(north, east));
+        mMap.animateCamera(CameraUpdateFactory.newLatLngBounds(bounds, 100));
+
+        //mMap.moveCamera(CameraUpdateFactory.newLatLng(vLoc));
+        //mMap.animateCamera(CameraUpdateFactory.zoomTo(14));
     }
 
     // set up the RecyclerView
@@ -434,10 +519,27 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         GridLayoutManager layoutManager = new GridLayoutManager(this, numberOfColumns);
         recyclerView.setLayoutManager(layoutManager);
         adapter = new MyRecyclerViewAdapter(this, data);
+        adapter.setClickListener(new MyRecyclerViewAdapter.ItemClickListener() {
+            public void onItemClick(View view, int position) {
+                try {
+                    if (position > 2) {
+                        JSONObject p = predictionData.get(position / 3 - 1);
+                        String v = getVehicle(p);
+                        if (!v.equals("")) {
+                            new DownloadVehicleTask().execute("vehicles/" + v);
+                        }
+                    }
+                }
+                catch (JSONException e) {
+                    Log.e(DEBUG_TAG, "JSONException", e);
+                }
+            }
+        });
         recyclerView.setAdapter(adapter);
         DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(recyclerView.getContext(),
                 layoutManager.getOrientation());
         recyclerView.addItemDecoration(dividerItemDecoration);
+
     }
 
     public void clearRecyclerView() {
