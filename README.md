@@ -6,5 +6,5 @@
 * Type in a station and press OK
 * Click on a prediction to see vehicle location
 
-* MainActivity located at [.../app/src/main/java/edu/umb/cs443/MainActivity.java]
+* MainActivity located at [../app/src/main/java/edu/umb/cs443/MainActivity.java]
       
