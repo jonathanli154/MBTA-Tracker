@@ -7,3 +7,4 @@
 * Click on a prediction to see vehicle location
 * [MainActivity located here](/app/src/main/java/edu/umb/cs443/MainActivity.java)
       
+![Screenshot](Screenshot.PNG)
