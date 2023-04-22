@@ -1,44 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\lijon\\Documents\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-uz\\values-uz.xml",
+            "outputFile": "C:\\Users\\lijon\\Documents\\School\\UMB\\18fall\\CS443\\MBTATracker\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-uz\\values-uz.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\cf30aa4fb57664fde0ddc29c52dc3d87\\res\\values-uz\\values-uz.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "109",
-                        "startColumns": "4",
-                        "startOffsets": "11945",
-                        "endColumns": "100",
-                        "endOffsets": "12041"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\mediarouter-v7-26.1.0.aar\\c4b912098f6391f76e5a48fe3c5aef4a\\res\\values-uz\\values-uz.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,164,276,392,506,605,711,808,923,1020,1115,1214,1306,1422,1534,1629,1714,1801,1912,2025,2110",
-                        "endColumns": "108,111,115,113,98,105,96,114,96,94,98,91,115,111,94,84,86,110,112,84,96",
-                        "endOffsets": "159,271,387,501,600,706,803,918,1015,1110,1209,1301,1417,1529,1624,1709,1796,1907,2020,2105,2202"
-                    },
-                    "to": {
-                        "startLines": "78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "8878,8987,9099,9215,9329,9428,9534,9631,9746,9843,9938,10037,10129,10245,10357,10452,10537,10624,10735,10848,10933",
-                        "endColumns": "108,111,115,113,98,105,96,114,96,94,98,91,115,111,94,84,86,110,112,84,96",
-                        "endOffsets": "8982,9094,9210,9324,9423,9529,9626,9741,9838,9933,10032,10124,10240,10352,10447,10532,10619,10730,10843,10928,11025"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-cast-framework-12.0.1.aar\\d64b8bf6957fd00f23fc6a301c7689ba\\res\\values-uz\\values.xml",
+                    "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-3\\0286495d5e5876c8d99e017dc50bb401\\transformed\\play-services-cast-framework-12.0.1\\res\\values-uz\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -55,75 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-12.0.1.aar\\671496e7448399fd5c1e86840096e571\\res\\values-uz\\values.xml",
-                    "from": {
-                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
-                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
-                        "startOffsets": "245,348,530,657,764,968,1099,1245,1376,1607,1713,1903,2033,2246,2434,2526,2613",
-                        "endColumns": "102,181,126,106,203,130,145,130,230,105,189,129,212,187,91,86,104",
-                        "endOffsets": "347,529,656,763,967,1098,1244,1375,1606,1712,1902,2032,2245,2433,2525,2612,2717"
-                    },
-                    "to": {
-                        "startLines": "58,59,60,61,62,63,64,65,67,68,69,70,71,72,73,74,75",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "5939,6046,6228,6359,6470,6674,6809,6959,7303,7534,7644,7834,7968,8181,8373,8469,8560",
-                        "endColumns": "106,181,130,110,203,134,149,134,230,109,189,133,212,191,95,90,108",
-                        "endOffsets": "6041,6223,6354,6465,6669,6804,6954,7089,7529,7639,7829,7963,8176,8368,8464,8555,8664"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-gcm-12.0.1.aar\\cd27cd08a02cd9ce84058f768045a601\\res\\values-uz\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "192",
-                        "endColumns": "98",
-                        "endOffsets": "290"
-                    },
-                    "to": {
-                        "startLines": "77",
-                        "startColumns": "4",
-                        "startOffsets": "8775",
-                        "endColumns": "102",
-                        "endOffsets": "8873"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-ads-12.0.1.aar\\d6f369a4d6a251bd7ca02319640c060b\\res\\values-uz\\values.xml",
-                    "from": {
-                        "startLines": "4,5,6,7,8,9,10",
-                        "startColumns": "0,0,0,0,0,0,0",
-                        "startOffsets": "199,270,385,455,522,604,717",
-                        "endColumns": "70,114,69,66,81,112,69",
-                        "endOffsets": "269,384,454,521,603,716,786"
-                    },
-                    "to": {
-                        "startLines": "101,102,103,104,105,106,107",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "11245,11320,11439,11513,11584,11670,11787",
-                        "endColumns": "74,118,73,70,85,116,73",
-                        "endOffsets": "11315,11434,11508,11579,11665,11782,11856"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\723a7dfbe1e4aed5d9348978f12f3308\\res\\values-uz\\values-uz.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,210,314,428,514,625,741,821,900,984,1093,1200,1301,1409,1514,1621,1782,1881",
-                        "endColumns": "104,103,113,85,110,115,79,78,83,108,106,100,107,104,106,160,98,83",
-                        "endOffsets": "205,309,423,509,620,736,816,895,979,1088,1195,1296,1404,1509,1616,1777,1876,1960"
-                    },
-                    "to": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,108",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,210,314,428,514,625,741,821,900,984,1093,1200,1301,1409,1514,1621,1782,11861",
-                        "endColumns": "104,103,113,85,110,115,79,78,83,108,106,100,107,104,106,160,98,83",
-                        "endOffsets": "205,309,423,509,620,736,816,895,979,1088,1195,1296,1404,1509,1616,1777,1876,11940"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-cast-12.0.1.aar\\d08a7750f5bb01465d7c99b8edceb080\\res\\values-uz\\values.xml",
+                    "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-3\\26e00da3bef4c40dea12c8527eaa1cc5\\transformed\\play-services-cast-12.0.1\\res\\values-uz\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7",
                         "startColumns": "0,0,0,0",
@@ -140,24 +38,41 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\firebase-messaging-12.0.1.aar\\bc99280a6f43e032934043c9dbfdb603\\res\\values-uz\\values.xml",
+                    "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-3\\b3a65d0a3b11f60046bf063904bc0686\\transformed\\play-services-gcm-12.0.1\\res\\values-uz\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
-                        "startOffsets": "205",
-                        "endColumns": "101",
-                        "endOffsets": "306"
+                        "startOffsets": "192",
+                        "endColumns": "98",
+                        "endOffsets": "290"
                     },
                     "to": {
-                        "startLines": "76",
+                        "startLines": "77",
                         "startColumns": "4",
-                        "startOffsets": "8669",
-                        "endColumns": "105",
-                        "endOffsets": "8770"
+                        "startOffsets": "8775",
+                        "endColumns": "102",
+                        "endOffsets": "8873"
                     }
                 },
                 {
-                    "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-places-12.0.1.aar\\5bc0116554378d06eb56a89b049a52ff\\res\\values-uz\\values.xml",
+                    "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-3\\922d4175355e24aa798df32389753646\\transformed\\appcompat-v7-27.1.0\\res\\values-uz\\values-uz.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,210,314,428,514,625,741,821,900,984,1093,1200,1301,1409,1514,1621,1782,1881",
+                        "endColumns": "104,103,113,85,110,115,79,78,83,108,106,100,107,104,106,160,98,83",
+                        "endOffsets": "205,309,423,509,620,736,816,895,979,1088,1195,1296,1404,1509,1616,1777,1876,1960"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,108",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,210,314,428,514,625,741,821,900,984,1093,1200,1301,1409,1514,1621,1782,11861",
+                        "endColumns": "104,103,113,85,110,115,79,78,83,108,106,100,107,104,106,160,98,83",
+                        "endOffsets": "205,309,423,509,620,736,816,895,979,1088,1195,1296,1404,1509,1616,1777,1876,11940"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-3\\c54ce8eb6974089bb250f063f6d3551a\\transformed\\play-services-places-12.0.1\\res\\values-uz\\values.xml",
                     "from": {
                         "startLines": "4,5",
                         "startColumns": "0,0",
@@ -174,7 +89,41 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-12.0.1.aar\\ff5a783aebacbaafb73afb3e69050ea7\\res\\values-uz\\values.xml",
+                    "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-3\\e6bf867c4e7eecafdb903e72402f2462\\transformed\\firebase-messaging-12.0.1\\res\\values-uz\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "205",
+                        "endColumns": "101",
+                        "endOffsets": "306"
+                    },
+                    "to": {
+                        "startLines": "76",
+                        "startColumns": "4",
+                        "startOffsets": "8669",
+                        "endColumns": "105",
+                        "endOffsets": "8770"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-3\\9fb03f5e41111c8b788f089f585e0d25\\transformed\\support-compat-27.1.1\\res\\values-uz\\values-uz.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "109",
+                        "startColumns": "4",
+                        "startOffsets": "11945",
+                        "endColumns": "100",
+                        "endOffsets": "12041"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-3\\d98f2d08c826a71022d34ce1c04cd999\\transformed\\play-services-basement-12.0.1\\res\\values-uz\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -188,6 +137,57 @@
                         "startOffsets": "7094",
                         "endColumns": "208",
                         "endOffsets": "7298"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-3\\7c2198970931f75ac5d062746e545c29\\transformed\\play-services-base-12.0.1\\res\\values-uz\\values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "245,348,530,657,764,968,1099,1245,1376,1607,1713,1903,2033,2246,2434,2526,2613",
+                        "endColumns": "102,181,126,106,203,130,145,130,230,105,189,129,212,187,91,86,104",
+                        "endOffsets": "347,529,656,763,967,1098,1244,1375,1606,1712,1902,2032,2245,2433,2525,2612,2717"
+                    },
+                    "to": {
+                        "startLines": "58,59,60,61,62,63,64,65,67,68,69,70,71,72,73,74,75",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "5939,6046,6228,6359,6470,6674,6809,6959,7303,7534,7644,7834,7968,8181,8373,8469,8560",
+                        "endColumns": "106,181,130,110,203,134,149,134,230,109,189,133,212,191,95,90,108",
+                        "endOffsets": "6041,6223,6354,6465,6669,6804,6954,7089,7529,7639,7829,7963,8176,8368,8464,8555,8664"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-3\\96c78d85c9af4e141da27abb86dcd7b3\\transformed\\mediarouter-v7-26.1.0\\res\\values-uz\\values-uz.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,164,276,392,506,605,711,808,923,1020,1115,1214,1306,1422,1534,1629,1714,1801,1912,2025,2110",
+                        "endColumns": "108,111,115,113,98,105,96,114,96,94,98,91,115,111,94,84,86,110,112,84,96",
+                        "endOffsets": "159,271,387,501,600,706,803,918,1015,1110,1209,1301,1417,1529,1624,1709,1796,1907,2020,2105,2202"
+                    },
+                    "to": {
+                        "startLines": "78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "8878,8987,9099,9215,9329,9428,9534,9631,9746,9843,9938,10037,10129,10245,10357,10452,10537,10624,10735,10848,10933",
+                        "endColumns": "108,111,115,113,98,105,96,114,96,94,98,91,115,111,94,84,86,110,112,84,96",
+                        "endOffsets": "8982,9094,9210,9324,9423,9529,9626,9741,9838,9933,10032,10124,10240,10352,10447,10532,10619,10730,10843,10928,11025"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\lijon\\.gradle\\caches\\transforms-3\\1b56697774318a900fbfaa804dc901d1\\transformed\\play-services-ads-12.0.1\\res\\values-uz\\values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10",
+                        "startColumns": "0,0,0,0,0,0,0",
+                        "startOffsets": "199,270,385,455,522,604,717",
+                        "endColumns": "70,114,69,66,81,112,69",
+                        "endOffsets": "269,384,454,521,603,716,786"
+                    },
+                    "to": {
+                        "startLines": "101,102,103,104,105,106,107",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "11245,11320,11439,11513,11584,11670,11787",
+                        "endColumns": "74,118,73,70,85,116,73",
+                        "endOffsets": "11315,11434,11508,11579,11665,11782,11856"
                     }
                 }
             ]

@@ -1,0 +1,5 @@
+edu.umb.cs443.test.app-androidTest-0 C:\Users\lijon\Documents\School\UMB\18fall\CS443\MBTATracker\app\build\generated\res\resValues\androidTest\debug
+edu.umb.cs443.test.app-androidTest-1 C:\Users\lijon\Documents\School\UMB\18fall\CS443\MBTATracker\app\build\generated\res\rs\androidTest\debug
+edu.umb.cs443.test.app-mergeDebugAndroidTestResources-2 C:\Users\lijon\Documents\School\UMB\18fall\CS443\MBTATracker\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+edu.umb.cs443.test.app-mergeDebugAndroidTestResources-3 C:\Users\lijon\Documents\School\UMB\18fall\CS443\MBTATracker\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+edu.umb.cs443.test.app-merged_res-4 C:\Users\lijon\Documents\School\UMB\18fall\CS443\MBTATracker\app\build\intermediates\merged_res\debugAndroidTest
